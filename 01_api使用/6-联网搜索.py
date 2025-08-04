@@ -2,7 +2,8 @@ from email import message
 import os
 from openai import OpenAI
 
-os.environ['DASHSCOPE_API_KEY'] = "sk-58f051ae745e4bb19fdca31735105b11"
+# 阿里云百炼智能开放平台申请API Key
+os.environ['DASHSCOPE_API_KEY'] = "your_api_key_here"
 # 从环境变量中，获取 DASHSCOPE_API_KEY
 api_key = os.environ.get('DASHSCOPE_API_KEY')
 
