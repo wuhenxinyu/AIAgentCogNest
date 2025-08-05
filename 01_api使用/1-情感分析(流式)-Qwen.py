@@ -20,6 +20,7 @@ def get_response(messages):
         temperature=0.7, # 温度参数，控制随机性
         top_p=0.8, # 控制输出的多样性
         max_tokens=1500, # 最大输出长度
+        # incremental_output=True, # 开启增量输出
     )
     return response
     
