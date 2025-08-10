@@ -3,6 +3,7 @@ DeepSeek + Faiss搭建本地知识库检索ChatPDF-Faiss
 """
 from PyPDF2 import PdfReader
 from langchain.chains.question_answering import load_qa_chain
+from langchain_community.callbacks.manager import get_openai_callback
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.embeddings import DashScopeEmbeddings
 from langchain_community.vectorstores import FAISS
@@ -213,17 +214,19 @@ if query:
     # 准备输入数据
     input_data = {"input_documents": docs, "question": query}
 
-    # 执行问答链
-    response = chain.invoke(input=input_data)
-    print(response["output_text"])
-    print("来源:")
+    # TODO 新增，使用回调函数跟踪API调用成本
+    with get_openai_callback() as cost:
+        # 执行问答链
+        response = chain.invoke(input=input_data)
+        print(f"查询已处理。成本: {cost}")
+        print(response["output_text"])
+        print("来源:")
 
     # 记录唯一的页码
     unique_pages = set()
 
     # 显示每个文档块的来源页码
     for doc in docs:
-        #print('doc=',doc)
         text_content = getattr(doc, "page_content", "")
         source_page = knowledgeBase.page_info.get(
             text_content.strip(), "未知"
