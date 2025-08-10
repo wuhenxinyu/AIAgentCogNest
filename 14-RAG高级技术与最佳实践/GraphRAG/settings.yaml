@@ -1,0 +1,145 @@
+
+# 文本编码模型设置,用于处理输入文本的分词
+encoding_model: cl100k_base
+# 要跳过的工作流列表
+skip_workflows: []
+
+# LLM模型配置,用于处理自然语言理解和生成任务
+llm:
+  api_key: ${GRAPHRAG_API_KEY}  # OpenAI API密钥
+  type: openai_chat # 使用OpenAI聊天模型,也可选择Azure OpenAI
+  model: gpt-4o-mini  # 使用的具体模型
+  model_supports_json: true # 模型是否支持JSON输出格式
+  # max_tokens: 4000  # 生成文本的最大token数
+  # request_timeout: 180.0  # API请求超时时间
+  # api_base: https://<instance>.openai.azure.com  # Azure OpenAI端点
+  # api_version: 2024-02-15-preview  # API版本
+  # organization: <organization_id>  # 组织ID
+  # deployment_name: <azure_model_deployment_name>  # Azure部署名称
+  # tokens_per_minute: 150_000 # 令牌速率限制
+  # requests_per_minute: 10_000 # 请求速率限制
+  # max_retries: 10  # 最大重试次数
+  # max_retry_wait: 10.0  # 重试等待时间
+  # sleep_on_rate_limit_recommendation: true # 是否按Azure建议的等待时间休眠
+  # concurrent_requests: 25 # 允许的并发请求数
+  # temperature: 0 # 采样温度参数
+  # top_p: 1 # top-p采样参数
+  # n: 1 # 生成的完成数量
+
+# 并行处理配置
+parallelization:
+  stagger: 0.3  # 请求错开时间间隔
+  # num_threads: 50 # 并行处理的线程数
+
+# 异步模式设置
+async_mode: threaded # 使用线程模式,也可选择asyncio
+
+# 文本嵌入配置
+embeddings:
+  async_mode: threaded # 嵌入计算的异步模式
+  # target: required # 嵌入目标选择
+  # batch_size: 16 # 批处理大小
+  # batch_max_tokens: 8191 # 单批次最大token数
+  llm:
+    api_key: ${GRAPHRAG_API_KEY}
+    type: openai_embedding # 使用OpenAI嵌入模型
+    model: text-embedding-3-small
+    # 其他配置项与上面的llm配置类似
+
+# 文本分块设置
+chunks:
+  size: 1200  # 每个块的大小
+  overlap: 100  # 相邻块之间的重叠token数
+  group_by_columns: [id] # 按文档ID分组,避免跨文档分块
+
+# 输入配置
+input:
+  type: file # 输入类型为文件
+  file_type: text # 文件类型为文本
+  base_dir: "input"  # 输入目录
+  file_encoding: utf-8  # 文件编码
+  file_pattern: ".*\\.txt$"  # 文件匹配模式
+
+# 缓存配置
+cache:
+  type: file # 缓存类型为文件
+  base_dir: "cache"  # 缓存目录
+
+# 存储配置
+storage:
+  type: file # 存储类型为文件
+  base_dir: "output"  # 输出目录
+
+# 报告配置
+reporting:
+  type: file # 报告类型为文件
+  base_dir: "output"  # 报告输出目录
+
+# 实体抽取配置
+entity_extraction:
+  prompt: "prompts/entity_extraction.txt"  # 实体抽取提示模板
+  entity_types: [organization,person,geo,event]  # 要抽取的实体类型
+  max_gleanings: 1  # 每次抽取的最大实体数
+
+# 描述总结配置
+summarize_descriptions:
+  prompt: "prompts/summarize_descriptions.txt"  # 总结提示模板
+  max_length: 500  # 总结最大长度
+
+# 声明抽取配置
+claim_extraction:
+  prompt: "prompts/claim_extraction.txt"  # 声明抽取提示模板
+  description: "Any claims or facts that could be relevant to information discovery."
+  max_gleanings: 1  # 每次抽取的最大声明数
+
+# 社区报告配置
+community_reports:
+  prompt: "prompts/community_report.txt"  # 报告生成提示模板
+  max_length: 2000  # 报告最大长度
+  max_input_length: 8000  # 输入最大长度
+
+# 图聚类配置
+cluster_graph:
+  max_cluster_size: 10  # 最大聚类大小
+
+# 图嵌入配置
+embed_graph:
+  enabled: false # 是否启用node2vec图嵌入
+  # num_walks: 10  # 随机游走次数
+  # walk_length: 40  # 游走长度
+  # window_size: 2  # 上下文窗口大小
+  # iterations: 3  # 训练迭代次数
+  # random_seed: 597832  # 随机种子
+
+# UMAP降维配置
+umap:
+  enabled: false # 是否启用UMAP降维
+
+# 快照配置
+snapshots:
+  graphml: false  # 是否保存GraphML格式
+  raw_entities: false  # 是否保存原始实体
+  top_level_nodes: false  # 是否保存顶层节点
+
+# 本地搜索配置
+local_search:
+  # text_unit_prop: 0.5  # 文本单元权重
+  # community_prop: 0.1  # 社区权重
+  # conversation_history_max_turns: 5  # 对话历史最大轮次
+  # top_k_mapped_entities: 10  # 返回的映射实体数量
+  # top_k_relationships: 10  # 返回的关系数量
+  # llm_temperature: 0  # LLM采样温度
+  # llm_top_p: 1  # LLM top-p采样
+  # llm_n: 1  # LLM生成数量
+  # max_tokens: 12000  # 最大token数
+
+# 全局搜索配置
+global_search:
+  # llm_temperature: 0  # LLM采样温度
+  # llm_top_p: 1  # LLM top-p采样
+  # llm_n: 1  # LLM生成数量
+  # max_tokens: 12000  # 最大token数
+  # data_max_tokens: 12000  # 数据最大token数
+  # map_max_tokens: 1000  # 映射最大token数
+  # reduce_max_tokens: 2000  # 归约最大token数
+  # concurrency: 32  # 并发数
