@@ -1,0 +1,13 @@
+客户信息表（CustomerInfo）：客户ID（CustomerID）、客户姓名（Name）、性别（Gender）、出生日期（DateOfBirth）、身份证号码（IDNumber）、联系地址（Address）、联系电话（PhoneNumber）、电子邮件地址（EmailAddress）、婚姻状况（MaritalStatus）、职业（Occupation）、健康状况（HealthStatus）、客户注册日期（RegistrationDate）、客户类型（CustomerType）、客户来源（SourceOfCustomer）、客户状态（CustomerStatus）
+
+保单信息表（PolicyInfo）：保单号（PolicyNumber）、客户ID（CustomerID）、保险产品ID（ProductID）、保单状态（PolicyStatus）、受益人（Beneficiary）、受益人关系（Relationship）、投保日期（PolicyStartDate）、终止日期（PolicyEndDate）、保费支付状态（PremiumPaymentStatus）、保费支付日期（PaymentDate）、保费支付方式（PaymentMethod）、代理人ID（AgentID）
+
+理赔信息表（ClaimInfo）：理赔号（ClaimNumber）、保单号（PolicyNumber）、理赔日期（ClaimDate）、理赔类型（ClaimType）、理赔金额（ClaimAmount）、理赔状态（ClaimStatus）、理赔描述（ClaimDescription）、受益人ID（BeneficiaryID）、医疗记录（MedicalRecords）、事故报告（AccidentReport）、审核人（ClaimHandler）、审核日期（ReviewDate）、支付方式（PaymentMethod）、支付日期（PaymentDate）、拒赔原因（DenialReason）
+
+受益人信息表（BeneficiaryInfo）：受益人ID（BeneficiaryID）、姓名（Name）、性别（Gender）、出生日期（DateOfBirth）、国籍（Nationality）、联系地址（Address）、电话号码（PhoneNumber）、电子邮件（EmailAddress）
+
+代理人信息表（AgentInfo）：代理人ID（AgentID）、姓名（Name）、性别（Gender）、出生日期（DateOfBirth）、联系地址（Address）、电话号码（PhoneNumber）、电子邮件（EmailAddress）、证书号码（CertificateNumber）、执照发放日期（LicenseIssueDate）、执照到期日期（LicenseExpirationDate）、佣金结构（CommissionStructure）
+
+保险产品信息表（ProductInfo）：产品ID（ProductID）、产品名称（ProductName）、产品类型（ProductType）、保险金额范围（CoverageRange）、保险期限（CoverageTerm）、保费（Premium）、缴费频率（PaymentFrequency）、产品特性（ProductFeatures）、投保年龄限制（AgeLimit）、保费计算方式（PremiumCalculation）、理赔流程（ClaimsProcess）、投保要求（UnderwritingRequirements）、销售区域（SalesRegion）、产品状态（ProductStatus）
+
+保险公司内部员工表（EmployeeInfo）：员工ID（EmployeeID）、姓名（Name）、性别（Gender）、出生日期（DateOfBirth）、联系地址（Address）、电话号码（PhoneNumber）、电子邮件（EmailAddress）、入职日期（HireDate）、职位（Position）、部门（Department）、工资（Salary）、工作地点（Location）、上级主管（Supervisor）、员工类型（EmployeeType）、员工状态（EmployeeStatus）

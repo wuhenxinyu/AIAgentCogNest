@@ -1,0 +1,110 @@
+CREATE TABLE CustomerInfo (
+    CustomerID INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Gender VARCHAR(10),
+    DateOfBirth DATE,
+    IDNumber VARCHAR(18),
+    Address VARCHAR(100),
+    PhoneNumber VARCHAR(20),
+    EmailAddress VARCHAR(50),
+    MaritalStatus VARCHAR(20),
+    Occupation VARCHAR(50),
+    HealthStatus VARCHAR(20),
+    RegistrationDate DATE,
+    CustomerType VARCHAR(20),
+    SourceOfCustomer VARCHAR(50),
+    CustomerStatus VARCHAR(20)
+);
+
+CREATE TABLE PolicyInfo (
+    PolicyNumber INT PRIMARY KEY,
+    CustomerID INT,
+    ProductID INT,
+    PolicyStatus VARCHAR(20),
+    Beneficiary VARCHAR(50),
+    Relationship VARCHAR(20),
+    PolicyStartDate DATE,
+    PolicyEndDate DATE,
+    PremiumPaymentStatus VARCHAR(20),
+    PaymentDate DATE,
+    PaymentMethod VARCHAR(20),
+    AgentID INT
+);
+
+CREATE TABLE ClaimInfo (
+    ClaimNumber INT PRIMARY KEY,
+    PolicyNumber INT,
+    ClaimDate DATE,
+    ClaimType VARCHAR(50),
+    ClaimAmount DECIMAL(10, 2),
+    ClaimStatus VARCHAR(50),
+    ClaimDescription VARCHAR(255),
+    BeneficiaryID INT,
+    MedicalRecords VARCHAR(255),
+    AccidentReport VARCHAR(255),
+    ClaimHandler VARCHAR(50),
+    ReviewDate DATE,
+    PaymentMethod VARCHAR(50),
+    PaymentDate DATE,
+    DenialReason VARCHAR(255)
+);
+
+CREATE TABLE BeneficiaryInfo (
+  BeneficiaryID INT PRIMARY KEY,
+  Name VARCHAR(50),
+  Gender VARCHAR(10),
+  DateOfBirth DATE,
+  Nationality VARCHAR(50),
+  Address VARCHAR(100),
+  PhoneNumber VARCHAR(20),
+  EmailAddress VARCHAR(50)
+);
+
+CREATE TABLE AgentInfo (
+    AgentID INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Gender VARCHAR(10),
+    DateOfBirth DATE,
+    Address VARCHAR(100),
+    PhoneNumber VARCHAR(20),
+    EmailAddress VARCHAR(50),
+    CertificateNumber VARCHAR(50),
+    LicenseIssueDate DATE,
+    LicenseExpirationDate DATE,
+    CommissionStructure VARCHAR(100)
+);
+
+CREATE TABLE ProductInfo (
+    ProductID INT PRIMARY KEY,
+    ProductName VARCHAR(100),
+    ProductType VARCHAR(50),
+    CoverageRange VARCHAR(50),
+    CoverageTerm INT,
+    Premium DECIMAL(10, 2),
+    PaymentFrequency VARCHAR(20),
+    ProductFeatures VARCHAR(200),
+    AgeLimit VARCHAR(50),
+    PremiumCalculation VARCHAR(100),
+    ClaimsProcess VARCHAR(200),
+    UnderwritingRequirements VARCHAR(200),
+    SalesRegion VARCHAR(50),
+    ProductStatus VARCHAR(20)
+);
+
+CREATE TABLE EmployeeInfo (
+    EmployeeID INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Gender VARCHAR(10),
+    DateOfBirth DATE,
+    Address VARCHAR(100),
+    PhoneNumber VARCHAR(20),
+    EmailAddress VARCHAR(50),
+    HireDate DATE,
+    Position VARCHAR(50),
+    Department VARCHAR(50),
+    Salary DECIMAL(10, 2),
+    Location VARCHAR(50),
+    Supervisor VARCHAR(50),
+    EmployeeType VARCHAR(20),
+    EmployeeStatus VARCHAR(20)
+);
