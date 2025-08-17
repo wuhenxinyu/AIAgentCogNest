@@ -26,6 +26,9 @@ import os
 os.environ['DASHSCOPE_API_KEY'] = 'sk-siRF78nIxVVBKekhvZF6POAzSrFXymXwzCFj4YT6SzFIlvWA'
 api_key = os.environ.get('DASHSCOPE_API_KEY')
 
+# 初始化一个大语言模型（LLM）实例，使用 ChatOpenAI 类。
+# ChatOpenAI 是 LangChain 库中用于与 OpenAI 聊天模型进行交互的类，
+# 借助该类可以方便地调用大语言模型完成各种自然语言处理任务。
 llm = ChatOpenAI(
     temperature=0.01,
     model="deepseek-v3",  
@@ -33,6 +36,10 @@ llm = ChatOpenAI(
     openai_api_key  = api_key
 )
 # 需要设置llm
+# 初始化 SQLDatabaseToolkit 实例，该工具包是 LangChain 中用于与 SQL 数据库交互的工具集合。
+# 参数 db 传入之前创建的 SQLDatabase 实例，代表要操作的数据库。
+# 参数 llm 传入之前初始化的大语言模型实例，用于理解自然语言并生成相应的 SQL 语句。
+# 通过这个工具包，后续可以将自然语言查询转换为数据库可执行的 SQL 语句，实现与数据库的交互。
 toolkit = SQLDatabaseToolkit(db=db, llm=llm)
 
 agent_executor = create_sql_agent(
