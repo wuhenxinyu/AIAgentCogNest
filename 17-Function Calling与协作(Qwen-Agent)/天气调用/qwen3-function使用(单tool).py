@@ -3,7 +3,7 @@ from http import HTTPStatus
 import dashscope
 
 # 设置 DashScope API Key
-dashscope.api_key = "sk-58f051ae745e4bb19fdca31735105b11"
+dashscope.api_key = "your_dashscope_api_key"
 
 # 高德天气 API 的 天气工具定义（JSON 格式）
 weather_tool = {
