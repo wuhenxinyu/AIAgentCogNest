@@ -1,3 +1,6 @@
+"""
+ 餐饮分析助手
+"""
 import os
 import dashscope
 from qwen_agent.agents import Assistant
