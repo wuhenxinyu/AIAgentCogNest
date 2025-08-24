@@ -4,10 +4,9 @@
 import os
 from langchain.agents import load_tools
 from langchain.agents import initialize_agent
-from langchain_community.llms import Tongyi  # 导入通义千问Tongyi模型
+from langchain_community.llms import OpenAI  # 导入通义千问Tongyi模型
 from langchain.agents import AgentType
 import dashscope
-from langchain_openai import OpenAI
 
 
 # 你需要在环境变量中添加 OPENAI_API_KEY 和 SERPAPI_API_KEY
@@ -19,7 +18,6 @@ api_key = os.environ.get('DASHSCOPE_API_KEY')
 
 # 加载模型
 # llm = Tongyi(model_name="qwen-turbo", dashscope_api_key=api_key)  # 使用通义千问qwen-turbo模型
-
 
 # 加载 OpenAI 模型
 llm = OpenAI(

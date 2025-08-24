@@ -16,15 +16,7 @@ api_key = os.environ.get('DASHSCOPE_API_KEY')
 dashscope.api_key = api_key
 
 # 加载 Tongyi 模型
-# llm = Tongyi(model_name="deepseek-v3", dashscope_api_key=api_key)  # 使用通义千问qwen-turbo模型
-
-# 加载 OpenAI 模型
-llm = OpenAI(
-    temperature=0.8, 
-    openai_api_key=api_key,
-    model_name='qwen-turbo',
-    openai_api_base="https://api.fe8.cn/v1"
-    ) 
+llm = Tongyi(model_name="deepseek-v3", dashscope_api_key=api_key)  # 使用通义千问qwen-turbo模型
 
 
 # 加载 serpapi, llm-math工具, 因为llm-math要使用LLM，所以后面需要指定LLM，使用多个Tools
