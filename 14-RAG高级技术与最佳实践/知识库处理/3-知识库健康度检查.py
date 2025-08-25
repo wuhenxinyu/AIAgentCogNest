@@ -16,7 +16,7 @@ import re
 from datetime import datetime
 
 # 从环境变量中获取 API Key
-os.environ['DASHSCOPE_API_KEY'] = 'sk-58f051ae745e4bb19fdca31735105b11'
+os.environ['DASHSCOPE_API_KEY'] = 'your_api_key_here'
 dashscope.api_key = os.getenv('DASHSCOPE_API_KEY')
 
 # 基于 prompt 生成文本

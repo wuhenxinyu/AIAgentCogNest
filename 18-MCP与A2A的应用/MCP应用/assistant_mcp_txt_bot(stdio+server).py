@@ -16,7 +16,7 @@ from qwen_agent.agents import Assistant
 from qwen_agent.gui import WebUI
 
 # 配置 DashScope
-dashscope.api_key = os.getenv('DASHSCOPE_API_KEY', 'sk-58f051ae745e4bb19fdca31735105b11')  # 从环境变量获取 API Key
+dashscope.api_key = os.getenv('DASHSCOPE_API_KEY', 'your_api_key_here')  # 从环境变量获取 API Key
 dashscope.timeout = 30  # 设置超时时间为 30 秒
 
 def init_agent_service():

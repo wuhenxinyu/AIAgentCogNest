@@ -4,7 +4,7 @@ import dashscope
 from dashscope.api_entities.dashscope_response import Role
 from dashscope import MultiModalConversation
 import os
-os.environ['DASHSCOPE_API_KEY'] = 'sk-58f051ae745e4bb19fdca31735105b11'
+os.environ['DASHSCOPE_API_KEY'] = 'your_api_key_here'
 dashscope.api_key = os.getenv("DASHSCOPE_API_KEY")
 
 local_file_path = 'file://13-RAG技术与应用/图片理解/6-万圣节.jpeg'

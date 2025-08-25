@@ -6,7 +6,7 @@ from langchain_community.vectorstores import FAISS
 from langchain_community.embeddings import DashScopeEmbeddings
 from langchain_community.llms import Tongyi
 import os
-os.environ['DASHSCOPE_API_KEY'] = 'sk-58f051ae745e4bb19fdca31735105b11'
+os.environ['DASHSCOPE_API_KEY'] = 'your_api_key_here'
 # 获取环境变量中的 DASHSCOPE_API_KEY
 DASHSCOPE_API_KEY = os.getenv('DASHSCOPE_API_KEY')
 if not DASHSCOPE_API_KEY:

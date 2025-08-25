@@ -10,7 +10,7 @@ from langchain_community.vectorstores import FAISS
 from typing import List, Tuple
 import os
 import pickle
-os.environ['DASHSCOPE_API_KEY'] = 'sk-58f051ae745e4bb19fdca31735105b11'
+os.environ['DASHSCOPE_API_KEY'] = 'your_api_key_here'
 DASHSCOPE_API_KEY = os.getenv('DASHSCOPE_API_KEY')
 if not DASHSCOPE_API_KEY:
     raise ValueError("请设置环境变量 DASHSCOPE_API_KEY")

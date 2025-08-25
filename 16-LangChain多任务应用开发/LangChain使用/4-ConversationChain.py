@@ -13,7 +13,7 @@ from langchain import ConversationChain
 import dashscope
 
 # 从环境变量获取 dashscope 的 API Key
-os.environ['DASHSCOPE_API_KEY'] = 'sk-58f051ae745e4bb19fdca31735105b11'
+os.environ['DASHSCOPE_API_KEY'] = 'your_api_key_here'
 api_key = os.environ.get('DASHSCOPE_API_KEY')
 dashscope.api_key = api_key
 

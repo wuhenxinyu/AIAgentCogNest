@@ -20,7 +20,7 @@ import jieba
 import re
 
 # 从环境变量中获取 API Key
-os.environ['DASHSCOPE_API_KEY'] = 'sk-58f051ae745e4bb19fdca31735105b11'
+os.environ['DASHSCOPE_API_KEY'] = 'your_api_key_here'
 DASHSCOPE_API_KEY = os.getenv('DASHSCOPE_API_KEY')
 
 # 初始化百炼兼容的 OpenAI 客户端

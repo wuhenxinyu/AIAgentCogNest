@@ -185,7 +185,7 @@ class CustomOutputParser(AgentOutputParser):
         )
 
 # 设置通义千问API密钥
-DASHSCOPE_API_KEY = 'sk-58f051ae745e4bb19fdca31735105b11'
+DASHSCOPE_API_KEY = 'your_api_key_here'
 # 确保设置dashscope API密钥
 import dashscope
 dashscope.api_key = DASHSCOPE_API_KEY
