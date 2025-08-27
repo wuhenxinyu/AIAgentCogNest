@@ -177,7 +177,7 @@ def init_agent_service():
             name='门票助手',
             description='门票查询与订单分析',
             system_message=system_prompt,
-            function_list=['exc_sql'],  # 移除绘图工具
+            function_list=functions_desc,  # 移除绘图工具
         )
         print("助手初始化成功！")
         return bot

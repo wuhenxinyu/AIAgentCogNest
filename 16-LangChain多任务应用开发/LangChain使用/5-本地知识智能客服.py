@@ -20,7 +20,7 @@ from langchain_community.llms import Tongyi  # 导入通义千问Tongyi模型
 # LLMChain 是 LangChain 中最常用的链之一，它将一个语言模型（LLM）和一个提示模板（PromptTemplate）组合在一起。
 # 通过传入 LLM 和 PromptTemplate 实例，LLMChain 可以根据模板格式化输入，然后使用 LLM 生成相应的输出。
 # 在后续代码中，我们可以使用 LLMChain 来执行根据预定义模板生成文本的任务。
-from langchain import LLMChain
+from langchain.chains import LLMChain
 # Agent执行，Agent结束
 from langchain.schema import AgentAction, AgentFinish
 # PromptTemplate: 管理LLMs的Prompts
