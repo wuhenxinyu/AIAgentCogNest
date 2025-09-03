@@ -1,0 +1,30 @@
+[
+  {
+    "id": "example_1",
+    "image": "11-vehicle-identity-verification-1.jpg",
+    "conversations": [
+      {
+        "from": "user",
+        "value": "<image>\n请描述这张图片中的汽车轮毂在哪里。"
+      },
+      {
+        "from": "assistant", 
+        "value": "在这张汽车图片中，我可以看到<ref>前轮轮毂</ref><box>(320,180),(450,280)</box>和<ref>后轮轮毂</ref><box>(620,190),(750,290)</box>。轮毂位于轮胎的中心位置，通常由金属合金制成，具有设计精美的辐条图案。"
+      }
+    ]
+  },
+  {
+    "id": "example_2",
+    "image": "5-Dangerous-driving-behavior-detection.jpg",
+    "conversations": [
+      {
+        "from": "user",
+        "value": "<image>\n图中的汽车在怎么行驶？"
+      },
+      {
+        "from": "assistant",
+        "value": "在这张汽车图片中，我可以看到汽车是在逆行行驶的，<ref>道路方向箭头</ref><box>(283,134),(327,172)</box>指向的是逆行的方向。"
+      }
+    ]
+  }
+]
