@@ -1,0 +1,872 @@
+[
+    {
+        "instruction": "Give three tips for staying healthy.",
+        "input": "",
+        "output": "1. Eat a balanced and nutritious diet: Make sure your meals are inclusive of a variety of fruits and vegetables, lean protein, whole grains, and healthy fats. This helps to provide your body with the essential nutrients to function at its best and can help prevent chronic diseases.\n\n2. Engage in regular physical activity: Exercise is crucial for maintaining strong bones, muscles, and cardiovascular health. Aim for at least 150 minutes of moderate aerobic exercise or 75 minutes of vigorous exercise each week.\n\n3. Get enough sleep: Getting enough quality sleep is crucial for physical and mental well-being. It helps to regulate mood, improve cognitive function, and supports healthy growth and immune function. Aim for 7-9 hours of sleep each night."
+    },
+    {
+        "instruction": "What are the three primary colors?",
+        "input": "",
+        "output": "The three primary colors are red, blue, and yellow. These colors are called primary because they cannot be created by mixing other colors and all other colors can be made by combining them in various proportions. In the additive color system, used for light, the primary colors are red, green, and blue (RGB)."
+    },
+    {
+        "instruction": "Describe the structure of an atom.",
+        "input": "",
+        "output": "An atom is the basic building block of all matter and is made up of three types of particles: protons, neutrons, and electrons. The structure of an atom can be described as a nucleus at the center surrounded by a cloud of electrons.\n\nThe nucleus of an atom is made up of protons and neutrons. Protons are positively charged particles and neutrons are neutral particles with no charge. Both of these particles are located in the nucleus of the atom, which is at the center of the atom and contains most of the atom's mass.\n\nSurrounding the nucleus of the atom is a cloud of electrons. Electrons are negatively charged particles that are in constant motion around the nucleus. The electron cloud is divided into shells or orbitals, and each shell can hold a certain number of electrons. The number of electrons in the outermost shell, called the valence shell, determines the chemical properties of the atom. \n\nIn a neutral atom, the number of protons in the nucleus is equal to the number of electrons in the electron cloud, so the positive and negative charges balance out and the atom has no overall charge. The number of protons, also called the atomic number, determines what element the atom is."
+    },
+    {
+        "instruction": "How can we reduce air pollution?",
+        "input": "",
+        "output": "There are several ways to reduce air pollution, including:\n\n1. Reduce energy consumption: By conserving energy, we reduce the amount of pollution emitted from power plants. Some ways to achieve this include: using energy-efficient appliances and lighting, insulating homes, and shutting off lights and electronics when not in use.\n\n2. Use public transportation or carpool: Cars and trucks are major sources of pollution. By using public transportation, carpooling or biking, you can reduce the number of cars on the road, which in turn reduces emissions.\n\n3. Be responsible with waste: When waste is burned or decomposed, they can release harmful gases into the air. Dispose of hazardous waste correctly and recycle materials like plastics, paper, and glass when possible.\n\n4. Support clean energy sources: Renewable energy sources like solar and wind power generate little or no pollution. Support clean energy companies and projects, and consider installing renewable energy systems in your home.\n\n5. Drive efficiently: If you need to drive, make sure your vehicle is well maintained and drive efficiently by avoiding rapid acceleration and braking, and reducing idling.\n\n6. Be mindful of product choices: Some products and practices release more pollution than others. Choose products with eco-friendly packaging and try to minimize your use of aerosol sprays, which can release harmful chemicals into the air."
+    },
+    {
+        "instruction": "Pretend you are a project manager of a construction company. Describe a time when you had to make a difficult decision.",
+        "input": "",
+        "output": "I had to make a difficult decision when I was working as a project manager at a construction company. I was in charge of a project that needed to be completed by a certain date in order to meet the client\u2019s expectations. However, due to unexpected delays, we were not able to meet the deadline and so I had to make a difficult decision. I decided to extend the deadline, but I had to stretch the team\u2019s resources even further and increase the budget. Although it was a risky decision, I ultimately decided to go ahead with it to ensure that the project was completed on time and that the client\u2019s expectations were met. The project was eventually successfully completed and this was seen as a testament to my leadership and decision-making abilities."
+    },
+    {
+        "instruction": "Write a concise summary of the following:\n\"Commodore 64 (commonly known as the C64 or CBM 64) was manufactured by Commodore Business Machine (CBM) in August 1982 with a starting price of $595. It was an 8-bit home computer with remarkable market success. Between 1983-1986, C64 sales amounted to about 17 million units sold, making them the best-selling single personal computer model of all time in 1983-1986. \n\nAdditionally, the Commodore 64 dominated the market with between 30% and 40% share and 2 million units sold per year, outselling the IBM PC clones, Apple Computers, and Atari computers. Adding to their success, Sam Tramiel (former Atari president), during an interview in 1989, said they were building 400,000 C64s a month for a couple of years. \"",
+        "input": "",
+        "output": "The Commodore 64 was a highly successful 8-bit home computer manufactured by Commodore Business Machine (CBM) in 1982, with sales amounting to approximately 17 million units sold between 1983-1986. It dominated the market with between 30% and 40% share and outsold its competitors, including IBM PC clones, Apple Computers, and Atari computers. At its peak, CBM was building 400,000 C64s a month for a couple of years."
+    },
+    {
+        "instruction": "Explain why the following fraction is equivalent to 1/4",
+        "input": "4/16",
+        "output": "The fraction 4/16 is equivalent to 1/4 because both fractions represent the same value. A fraction can be simplified by dividing both the numerator and the denominator by a common factor. In this case, 4 is a common factor of both the numerator and the denominator of 4/16. When we divide both by 4, we get 4/4 = 1 and 16/4 = 4, so the simplified fraction is 1/4. Alternatively, we can think of this in terms of multiplication. For example, if we multiply the numerator and denominator of the fraction 1/4 by 4, we get (1x4)/(4x4), or 4/16. Since both fractions can be derived from the other through multiplication or division by the same number, they represent the same value and are equivalent."
+    },
+    {
+        "instruction": "Write a short story in third person narration about a protagonist who has to make an important career decision.",
+        "input": "",
+        "output": "Sophie sat at her desk, staring blankly at the computer screen. Her mind was racing as she weighed the options in front of her. She had been offered a promotion to a senior management position within her company, but it meant moving across the country and leaving her friends and family behind. At the same time, her dream job at a rival company had finally opened up, and she had been invited for an interview. \n\nThe thought of leaving her comfortable life behind, to take a chance on something new and uncertain, made Sophie feel anxious, but also excited. She had always been one to take risks, and it had paid off in the past. But now, with such a big decision to make, Sophie couldn't help but feel overwhelmed.\n\nAfter much deliberation, Sophie made her choice. She packed her bags, said goodbye to her loved ones, and moved across the country for the new job. It was a difficult first few months, adjusting to a new city and a new company culture. But as time went by, Sophie realized that she had made the best decision for her career. The job was challenging, but also rewarding, and she was surrounded by passionate, driven colleagues who inspired her to grow and develop.\n\nIn the end, Sophie's bold move paid off. She was thriving in her new role, and had made new friends and connections in her new city. Looking back, Sophie was grateful for the opportunity to take a risk and make a change, and was confident that she had made the right decision for her career."
+    },
+    {
+        "instruction": "Evaluate this sentence for spelling and grammar mistakes",
+        "input": "He finnished his meal and left the resturant",
+        "output": "There are two spelling errors in the sentence. The corrected sentence should be: \"He finished his meal and left the restaurant.\""
+    },
+    {
+        "instruction": "How did Julius Caesar die?",
+        "input": "",
+        "output": "Julius Caesar, the Roman Military general, and statesman was assassinated on March 15, 44 BC. He was stabbed to death at a meeting of the Senate in the Theatre of Pompey by a group of senators who called themselves the Liberatores. Led by Gaius Cassius Longinus, and Marcus Junius Brutus, they believed that Caesar's dictatorship was subverting the Roman Republic and sought to restore the traditional republican government. The exact number of assailants is not known, but it is believed that a group of as many as 60 conspirators participated in the assassination, and each of them took turns in stabbing Caesar. The day of his death is still known as the Ides of March."
+    },
+    {
+        "instruction": "What is the capital of France?",
+        "input": "",
+        "output": "The capital city of France is Paris."
+    },
+    {
+        "instruction": "Generate a list of ten items a person might need for a camping trip",
+        "input": "",
+        "output": "Here are ten items a person might need for a camping trip:\n\n1. Tent - to provide shelter and protection from the elements\n2. Sleeping bag - to stay warm and comfortable while sleeping\n3. Portable stove or campfire grill - for cooking meals\n4. Cooler with ice or ice packs - to keep perishable food and drinks cold\n5. Lantern or flashlight - to provide light during the night\n6. First aid kit - for minor injuries or ailments\n7. Map and compass or GPS - for navigation on hikes or exploring the area\n8. Camp chairs or folding chairs - for comfortable seating around the campsite\n9. Insect repellent - to protect against bug bites\n10. Sunscreen - to protect against sunburn."
+    },
+    {
+        "instruction": "Discuss the causes of the Great Depression",
+        "input": "",
+        "output": "The Great Depression was a period of economic decline that lasted from 1929-1939, making it the longest-lasting depression in modern history. It affected not only the United States but countries around the world, causing substantial social and economic upheaval.\n\nThere were several major causes of the Great Depression, which include:\n\n1. Stock Market Crash of 1929 - In October of 1929, the stock market experienced a significant fall that wiped out millions of investors. This event is considered by many to be the initial trigger of the Great Depression.\n\n2. Overproduction - During the 1920s, many industries produced more goods than consumers wanted or could afford. This ultimately led to a decline in demand for goods, causing job loss, lower wages, and business failure.\n\n3. High Tariffs and War Debts - Protectionist trade policies in the form of high tariffs led to a decline in global trade, as other countries retaliated with tariffs of their own. Additionally, many countries were struggling to repay war debts, which led to economic instability.\n\n4. Bank Failures - As demand for goods declined, many banks began to fail, causing a loss of confidence in the banking system. This led to a massive withdrawal of money from banks, causing even more banks to fail.\n\n5. Drought Conditions - The Dust Bowl was a severe drought and dust storm that hit the Great Plains region of the United States in the 1930s. This had a significant impact on agriculture, causing many farmers to lose their land and livelihoods which worsened the effects of the depression.\n\nOverall, the Great Depression was caused by a combination of factors, including economic, environmental, and political factors. Its impact was widespread, affecting millions of people around the world."
+    },
+    {
+        "instruction": "Classify the following into animals, plants, and minerals",
+        "input": "Oak tree, copper ore, elephant",
+        "output": "Animals: Elephant\nPlants: Oak tree\nMinerals: Copper ore"
+    },
+    {
+        "instruction": "Explain the use of word embeddings in Natural Language Processing",
+        "input": "",
+        "output": "Word embeddings are a type of natural language processing technique used to map words or phrases from a vocabulary to vectors of real numbers. The idea is to represent words in a continuous vector space, where the similarity between words can be measured by the distance between their corresponding vectors. This can be done using algorithms such as Word2Vec or GloVe, among others.\n\nThe use of word embeddings has revolutionized the field of Natural Language Processing, as it allows computers to understand text in a much more meaningful way than simply looking at the presence or absence of individual words. For example, when using word embeddings, the computer can understand that the words \"dog\" and \"puppy\" are closely related, while the words \"dog\" and \"umbrella\" are not.\n\nWord embeddings are used in a wide variety of NLP tasks, including text classification, sentiment analysis, machine translation, named entity recognition, and many others. They form the basis for many advanced language processing techniques, such as deep learning and neural machine translation."
+    },
+    {
+        "instruction": "Describe the function of a computer motherboard",
+        "input": "",
+        "output": "The motherboard, also known as the mainboard or system board, is the central printed circuit board in a computer. It serves as the backbone or foundation for a computer, connecting all the different components such as the CPU, RAM, storage drives, expansion cards, and peripherals. The motherboard manages communication and data transfer between these components, allowing them to work together and perform their designated tasks.\n\nThe motherboard also includes important circuitry such as the power regulation circuit that provides power to the different components, and the clock generator which synchronizes the operation of these components. It also contains the BIOS (basic input/output system), which is a firmware that controls the boot process and provides an interface for configuring and managing the computer's hardware. Other features on a motherboard may include built-in networking, audio, and video capabilities.\n\nOverall, the function of a computer motherboard is to provide a platform for the integration and operation of all the various components that make up a computer, making it an essential part of any computing system."
+    },
+    {
+        "instruction": "Refactor this code and add comments.",
+        "input": "def factorialize(num):\n  factorial = 1\n  for i in range(1, num):\n    factorial *= i\n  \n  return factorial",
+        "output": "```\n# This is a function that calculates the factorial of a given number\ndef factorialize(num):\n  # Set the variable 'factorial' to 1\n  factorial = 1\n  # Iterate from 1 to 'num' using the range function\n  for i in range(1, num):\n    # Multiply the 'factorial' variable by the current number in the iteration\n    factorial *= i\n  # Return the final value of 'factorial'\n  return factorial\n```"
+    },
+    {
+        "instruction": "Propose an ethical solution to the problem of data privacy",
+        "input": "",
+        "output": "One ethical solution to the problem of data privacy is to enforce stricter regulations and standards that require companies to be transparent about how they collect, store, and use user data. This means that companies must explicitly state what data they are collecting from users, why they need this data, and how they plan to use it. Users will also have the right to access, modify, and delete their data at any time.\n\nIn addition, companies should prioritize implementing robust security measures to protect user data from unauthorized access and breaches. This could include measures such as encryption, multi-factor authentication, and regular security audits. In the event of a data breach, companies must be held accountable and must inform affected users in a timely manner.\n\nMoreover, users should be empowered to make informed decisions about their data and privacy. This can be achieved by raising awareness about data privacy and providing tools and resources to help individuals better manage their personal information online.\n\nUltimately, ensuring data privacy is a shared responsibility between companies and users. Companies must be committed to safeguarding user data, while users must take an active role in protecting their personal information. By working together, we can create a safer and more ethical data landscape."
+    },
+    {
+        "instruction": "Generate three verbs that mean the same as \"to apologize\"",
+        "input": "",
+        "output": "1. To express regret\n2. To atone\n3. To make amends"
+    },
+    {
+        "instruction": "What does DNA stand for?",
+        "input": "",
+        "output": "DNA stands for Deoxyribonucleic Acid. It is the molecule that carries the genetic instructions used in the growth, development, functioning, and reproduction of all living organisms."
+    },
+    {
+        "instruction": "Compare and contrast the Cuban Missile Crisis and the Vietnam War.",
+        "input": "",
+        "output": "The Cuban Missile Crisis (1962) and the Vietnam War (1955-1975) were two pivotal events in US history that occurred during the Cold War. Although both events were characterized by heightened tensions between the United States and Communist powers, they had some key differences that set them apart.\n\nThe Cuban Missile Crisis was a 13-day political and military standoff between the United States and the Soviet Union over the installation of Soviet nuclear missiles in Cuba, just 90 miles from US shores. In contrast, the Vietnam War was a prolonged conflict that lasted for almost two decades, involving the US, South Vietnam, North Vietnam, and other Communist allies. The war was a result of the US attempting to contain the spread of communism in Southeast Asia.\n\nThe Cuban Missile Crisis is often considered the closest the world ever came to nuclear war, with the US and the Soviet Union coming to the brink of a full-scale confrontation. Ultimately, a peaceful resolution was reached, with the Soviet Union agreeing to remove the missiles from Cuba in exchange for a US promise not to invade Cuba and a secret agreement to remove US missiles from Turkey. In contrast, the Vietnam War resulted in significant devastation, with millions of lives lost, many more injured, and widespread destruction of infrastructure.\n\nAnother major difference between the two events was domestic support. During the Cuban Missile Crisis, there was widespread public support for the US government's actions, and President Kennedy's handling of the situation is often cited as one of his greatest accomplishments. However, the Vietnam War was deeply unpopular among the American public, and anti-war sentiment grew steadily over the years. The war resulted in a significant loss of faith in the US government and military, and it is still remembered as one of the most divisive conflicts in American history.\n\nIn conclusion, while the Cuban Missile Crisis and the Vietnam War were both major events in the Cold War, they differed in their duration, outcome, and domestic support. The Cuban Missile Crisis was a short, intense standoff that was resolved peacefully, whereas the Vietnam War was a prolonged conflict that resulted in widespread devastation and was deeply unpopular at home."
+    },
+    {
+        "instruction": "Generate a list of random words.",
+        "input": "",
+        "output": "Here is a list of ten random words: \n\n1. Quibble\n2. Avarice\n3. Embellish\n4. Resonance\n5. Mercurial\n6. Conflagration\n7. Indefatigable\n8. Mischievous\n9. Delineate\n10. Paragon"
+    },
+    {
+        "instruction": "Based on the information provided, rewrite the sentence by changing its tense from past to future.",
+        "input": "She played the piano beautifully for hours and then stopped as it was midnight.",
+        "output": "She will play the piano beautifully for hours and then stop as it will be midnight."
+    },
+    {
+        "instruction": "Who is the world's most famous painter?",
+        "input": "",
+        "output": "The title of the world's most famous painter is subjective and can vary depending on an individual's personal opinion. However, many people consider Leonardo da Vinci, a famous artist of the Italian Renaissance, as one of the most famous painters in the world. He is known for his iconic works including the \"Mona Lisa\" and \"The Last Supper.\" Other notable painters often cited as being among the most famous in the world include Vincent van Gogh, Pablo Picasso, and Michelangelo."
+    },
+    {
+        "instruction": "Explain the concept of cogging torque.",
+        "input": "",
+        "output": "Cogging torque is a torque that's produced by the interaction between the magnetic field of the stator (the stationary component in an electric motor or generator) and the rotor (the rotating component). This interaction produces a magnetic attraction between the stator teeth and the rotor poles. This scenario leads to an uneven torque, which makes the motor to experience a jerky motion instead of smooth rotation.\n\nCogging torque is mainly experienced in motors with a large number of turns in the rotor and stator windings and when the motor has a small air gap. The cogging effect can be reduced by skewing the stator or rotor slots or by choosing the number of stator and rotor slots accordingly. A proper design reduces the cogging torque, thus resulting in smooth and continuous rotation."
+    },
+    {
+        "instruction": "Look up the boiling point of water.",
+        "input": "",
+        "output": "The boiling point of water is 100 degrees Celsius or 212 degrees Fahrenheit at standard atmospheric pressure."
+    },
+    {
+        "instruction": "Describe the life and reign of King Charles II.",
+        "input": "",
+        "output": "King Charles II was the monarch of England, Scotland, and Ireland from 1660 to 1685. Born on May 29, 1630, he was the son of King Charles I and Queen Henrietta Maria. During his father's reign, England was embroiled in civil war between the royalists who supported the monarchy and the parliamentarians who sought to limit its powers. Eventually, the parliamentarians, led by Oliver Cromwell, emerged victorious, and Charles I was executed in 1649.\n\nCharles II went into exile and lived for a time in France and the Netherlands. In 1660, following the death of Cromwell and the collapse of the Commonwealth government, Charles was invited back to England and restored to the throne.\n\nHis reign, often referred to as the Restoration, was marked by a period of relative stability and prosperity. Charles re-established the Church of England as the national church, and he worked to rebuild the country after the devastation of the civil wars. He also pursued a policy of religious tolerance, issuing the Declaration of Indulgence in 1672, which granted freedom of worship to non-Anglican Protestants.\n\nCharles was also known for his interest in science and the arts, and he was a patron of the Royal Society, a scientific organization founded in 1660. His court was known for its extravagance and hedonism, and Charles himself had a reputation as a womanizer.\n\nIn the later years of his reign, Charles faced increasing opposition from parliament, particularly over his pro-Catholic policies and his attempts to bypass their authority. In 1678, the Test Act was passed, requiring all officeholders to swear an oath against Catholicism, which Charles reluctantly signed.\n\nCharles died on February 6, 1685, and was succeeded by his brother James II. He is remembered as a popular and charismatic monarch who helped to restore stability to England after a period of turmoil."
+    },
+    {
+        "instruction": "Find the area of a circle given its radius.",
+        "input": "Radius = 4",
+        "output": "The formula to find the area of a circle is A = \u03c0r^2, where \"A\" is the area of the circle and \"r\" is the radius. Substituting the given value of the radius in the formula:\n\nA = \u03c0(4^2)\nA = 16\u03c0\n\nThus, the area of the circle with the radius of 4 units is 16\u03c0 square units."
+    },
+    {
+        "instruction": "Identify the lines of longitude that divides North and South America.",
+        "input": "",
+        "output": "The line of longitude that divides North and South America is the 77\u00b0 00' 0\" or 77\u00b0W which is also known as the Panama-Colombia border."
+    },
+    {
+        "instruction": "Explain the process of cellular respiration in plants.",
+        "input": "",
+        "output": "Cellular respiration in plants is the process by which they convert glucose into ATP, a molecule used as the primary energy source by cells. This process is similar to the one in animals, and it involves various enzymatic reactions.\n\nIn plants, cellular respiration usually occurs in the mitochondria, and the process can be divided into three stages: glycolysis, the citric acid cycle (also known as the Krebs cycle), and the electron transport chain.\n\nDuring glycolysis, a molecule of glucose is broken down into two molecules of pyruvate. This process takes place in the cytoplasm of the cell and produces two molecules of ATP and two of NADH, a molecule that carries electrons.\n\nThe next stage, the citric acid cycle, takes place inside the mitochondria. Here, the two pyruvate molecules produced in glycolysis are further broken down to produce ATP, NADH, and FADH2, another molecule that carries electrons.\n\nFinally, in the electron transport chain, the NADH and FADH2 molecules produced in the previous stages carry electrons to a series of protein complexes embedded in the inner membrane of the mitochondrion. These electrons produce a flow of protons across the membrane, creating a gradient that drives the production of ATP through a process known as chemiosmosis.\n\nIn summary, cellular respiration in plants is a process that involves the breakdown of glucose to produce ATP, which is used as the primary energy source by cells. This process occurs in the mitochondria and involves several stages including glycolysis, the citric acid cycle, and the electron transport chain."
+    },
+    {
+        "instruction": "Rewrite the following sentence using active voice.",
+        "input": "The news report was read by the captain.",
+        "output": "The captain read the news report."
+    },
+    {
+        "instruction": "Generate a list of adjectives that describe a person as brave.",
+        "input": "",
+        "output": "1. Courageous\n2. Fearless\n3. Bold\n4. Valiant\n5. Intrepid\n6. Daring\n7. Unflinching\n8. Undaunted\n9. Resolute\n10. Gallant\n11. Plucky\n12. Heroic\n13. Lionhearted\n14. Stouthearted\n15. Audacious."
+    },
+    {
+        "instruction": "Outline the consequences of deforestation.",
+        "input": "",
+        "output": "Deforestation, or the large-scale removal of trees from a forested area, has numerous consequences that can have significant impacts on the environment, economy, and local communities. Some of the consequences of deforestation include:\n\n1. Loss of biodiversity: Forests are home to a wide variety of plant and animal species, many of which rely on the forest for their survival. Removing large areas of trees can destroy their habitat, leading to a loss of biodiversity.\n\n2. Soil erosion: Trees and their root systems help hold soil in place and prevent erosion. Deforestation can leave soil exposed and vulnerable to being washed away during heavy rain or strong winds.\n\n3. Climate change: Forests play an important role in helping to regulate the earth's climate by storing carbon dioxide. When trees are removed, the stored carbon dioxide is released into the atmosphere, contributing to climate change.\n\n4. Loss of livelihoods: Many indigenous and local communities rely on forests for their livelihoods, using the wood for fuel, building materials, and food. Deforestation can have a devastating impact on these communities, leaving them without resources or the means to support themselves.\n\n5. Economic impact: Forests provide a variety of valuable resources, including wood, paper, and other forest products. Deforestation can reduce the availability of these resources, impacting the economy and industries that rely on them.\n\n6. Flooding: Forests help to absorb and store water, reducing the risk of flooding in nearby areas. Deforestation can increase the risk of flooding, causing damage to homes, infrastructure, and crops.\n\nOverall, deforestation can have a wide range of negative impacts, affecting not only the environment but also the economy and local communities. It is important to find sustainable ways to manage forest resources to prevent deforestation and its associated consequences."
+    },
+    {
+        "instruction": "Develop a plan to reduce electricity usage in a home.",
+        "input": "",
+        "output": "1. Analyze current electricity usage: Begin by collecting data about the current electricity usage in the home, including the average monthly bill, and identify the appliances and devices that consume the most electricity.\n\n2. Replace inefficient appliances: Upgrade or replace outdated and energy-inefficient appliances with ENERGY STAR-certified appliances that consume less electricity while providing the same functionality.\n\n3. Use LED lighting: Replace traditional light bulbs with energy-efficient LED bulbs, which use up to 75% less energy and last up to 25 times longer.\n\n4. Unplug devices when not in use: Many electronic devices such as chargers, TVs, and computers consume power even when they are turned off. Unplug devices when they\u2019re not in use to reduce electricity consumption.\n\n5. Use smart power strips: Consider using smart power strips, which automatically cut power to devices that are not in use, thereby reducing standby power consumption.\n\n6. Adjust the thermostat: Heating and cooling can account for up to half of a home\u2019s total energy consumption. Adjust the thermostat and use programmable or smart thermostats to reduce heating or cooling usage when no one is at home, or at night.\n\n7. Install weather stripping: Install weather stripping around doors and windows to prevent air leaks, thus reducing the load on heating and cooling systems.\n\n8. Use natural lighting: Take advantage of natural daylight whenever possible by opening blinds and curtains during the day and avoiding the use of artificial lighting.\n\n9. Encourage energy-saving behaviors: Educate household members about energy-saving habits, such as turning off lights when leaving a room, taking shorter showers, and running the dishwasher and washing machine only when they are full.\n\n10. Monitor electricity usage regularly: Keep track of electricity usage on a regular basis, and make necessary adjustments to the energy-saving plan based on the results."
+    },
+    {
+        "instruction": "Arrange the words in the given sentence to form a grammatically correct sentence.",
+        "input": "quickly the brown fox jumped",
+        "output": "The brown fox jumped quickly."
+    },
+    {
+        "instruction": "Analyze the given text for its tone.",
+        "input": "The world has been greatly impacted by the COVID-19 pandemic and it has drastically changed our lives.",
+        "output": "The tone of the text is serious and somber. The use of terms such as \"greatly impacted,\" \"drastically changed,\" and \"pandemic\" suggest the seriousness and gravity of the situation, and convey a sense of heaviness and concern."
+    },
+    {
+        "instruction": "The sum of the digits of the year 2004 is 6. What is the first year after 2000 for which the sum of the digits is 12?",
+        "input": "",
+        "output": "To find the first year after 2000 for which the sum of the digits is 12, take the greatest possible units digit, 9. 2+9=11, so take 1 as the tens digit and 0 as the hundreds digit. The answer is therefore 2019."
+    },
+    {
+        "instruction": "Rewrite the given paragraph in a shorter, easier to understand form.",
+        "input": "Although it is generally accepted that the internet has allowed us to connect with people all over the world, there are still those people who are not familiar with its basic functions, who don\u2019t understand why it has become so commonplace, or what its true capabilities are.",
+        "output": "Some people don't understand the internet's basic functions, its common use and full potential, despite its ability to connect us globally."
+    },
+    {
+        "instruction": "Use the following pieces of context to answer the question at the end. If you don't know the answer, just say that you don't know, don't try to make up an answer.\n\nFounded in the 13th century, Berlin has had an eventful history. Excavations from 2008 suggest that the city may be even older than was previously assumed: state archaeologists have discovered an oak beam that probably dates back to 1183.\n\nAlmost no other metropolis has experienced such frequent, radical change transforming the face of the city. Although Berlin saw steady growth in its importance, dazzling epochs alternated with darker eras. Nevertheless, the formerly divided city has succeeded in becoming a vibrant metropolis in the heart of Europe.\n\nQuestion: What is the best restaurant in Berlin?",
+        "input": "",
+        "output": "I'm sorry, I cannot answer that question as the context given does not provide information about the best restaurant in Berlin."
+    },
+    {
+        "instruction": "Generate a poem that expresses joy.",
+        "input": "",
+        "output": "A burst of laughter, a sprinkle of cheer\nMoments of joy that we hold so dear\nA leap of faith, a smile so wide\nA feeling of warmth that blooms inside\n\nThe sun shining bright, the sky so blue\nA colorful world, a stunning view\nA hug so tight, a word so kind\nA happy heart, a peaceful mind\n\nDancing to the rhythm, singing out loud\nBeing yourself, standing out from the crowd\nEmbrace the little things that make us glow\nAnd let the joy within you overflow\n\nHappiness is a journey, not a place to be\nA state of mind, just let it be free\nSpread the joy, wherever you go\nAnd the world will shine, with a radiant glow."
+    },
+    {
+        "instruction": "Find the real root of the equation \n sqrt(x) + sqrt(x+2) = 10.\n",
+        "input": "",
+        "output": "Subtracting sqrt(x) from both sides and then squaring, we get \n x+2 = (10-sqrt(x))^2 = x - 20sqrt(x) + 100.\nTherefore, 20sqrt(x) = 98, so sqrt(x) = 98/20 = 49/10. Therefore, x = (49/10)^2 = 2401/100, or x = 24.01."
+    },
+    {
+        "instruction": "Brainstorm possible solutions to reduce water pollution.",
+        "input": "",
+        "output": "1. Regulate Industrial Discharges: Governments should enforce strict regulations on industries to control and reduce the amount of chemicals and pollutants they release into water bodies.\n\n2. Promote Eco-Friendly Agriculture: Farmers should be encouraged to use eco-friendly agricultural methods to reduce water pollution. This can include measures such as reducing the use of fertilizers and pesticides, and using natural methods to control pests.\n\n3. Increase Public Awareness: There should be an increased public awareness campaign on the dangers of water pollution and the steps that individuals can take to reduce it. Simple actions such as properly disposing of hazardous household waste, reducing the use of single-use plastics, and conserving water can go a long way in reducing water pollution.\n\n4. Improve Sewage and Wastewater Treatment: Governments should invest in improving sewage and wastewater treatment facilities to ensure that they are efficient and effective in removing contaminants from waste before it is released into water bodies.\n\n5. Promote Green Energy: The use of green energy sources such as solar and wind power can reduce the amount of pollutants released by fossil fuels into water bodies. Governments should provide incentives to individuals and industries to switch to green energy sources.\n\n6. Monitor Water Quality: Regular monitoring of water quality in rivers, lakes, and oceans can help to identify sources of pollution and take appropriate measures to reduce it.\n\n7. Cleanup and Restoration: Governments should invest in cleaning up polluted water bodies and restoring their natural ecosystems. This can include measures such as removing pollutants, planting vegetation to prevent erosion, and reintroducing native species.\n\n8. Strengthen and Enforce Environmental Laws: Strong environmental laws and regulations, as well as their strict enforcement, can help to reduce water pollution. Governments should take measures to ensure that violators are punished and that the laws are effective in protecting water resources."
+    },
+    {
+        "instruction": "Explain why the given definition is wrong.",
+        "input": "A mole is an animal that lives underground.",
+        "output": "While it is true that a mole is an animal that lives underground, this definition is incomplete and could be misunderstood because it does not adequately describe the mole's characteristics or biological classification. Moles belong to the family of mammals called Talpidae, and they are small, burrowing, and insectivorous. They are known for their cylindrical bodies, short limbs, and small eyes and ears. The definition also does not differentiate the animal from the chemical term mole, which refers to a unit of measurement used in chemistry. For these reasons, the given definition of a mole is not entirely accurate or clearly descriptive."
+    },
+    {
+        "instruction": "Variable x is defined as \u201c4x + 2y = 10\u201d. Find the value of x.",
+        "input": "",
+        "output": "Given the equation 4x + 2y = 10, there are infinitely many solutions for the value of x, depending on the value of y. In other words, the value of x is dependent on the value of y.\n\nHowever, it is still possible to express x in terms of y. To do so, we can rearrange the equation to solve for x:\n\n4x + 2y = 10\n4x = 10 - 2y\nx = (10 - 2y)/4\n\nSo, according to the equation, the value of x is (10 - 2y)/4. Without knowing the specific value of y, it is not possible to determine the exact value of x."
+    },
+    {
+        "instruction": "Write a short paragraph about the given topic.",
+        "input": "The importance of using renewable energy",
+        "output": "The importance of using renewable energy cannot be overstated. Renewable energy sources, such as solar, wind, and hydro power, can be replenished naturally in a short period of time, unlike fossil fuels, which are finite. Utilizing renewable energy reduces greenhouse gas emissions, thus helping to mitigate the effects of climate change. Moreover, it reduces our reliance on non-renewable sources of energy, promoting energy independence, and security. Additionally, renewable energy sources are often cheaper in the long run and can create job opportunities in the green energy sector. Therefore, transitioning to renewable energy is crucial for the health of the planet and the sustainability of our future."
+    },
+    {
+        "instruction": "Explain the concept of artificial intelligence in simple terms.",
+        "input": "",
+        "output": "Artificial Intelligence, commonly known as AI, is basically the development of computer systems that can perform tasks that would normally require human intelligence. These tasks can include things like language translation, decision-making, visual perception, speech recognition, and even playing complex strategy games.\n\nIn simpler terms, AI is when computers and machines can do things that normally only humans can do, like thinking, reasoning and problem-solving. This is achieved by creating algorithms, or sets of rules, that can help the computer learn on its own and make decisions based on data.\n\nOverall, AI is a fascinating and powerful technology that enables computers to learn, adapt and improve in ways that were previously thought impossible."
+    },
+    {
+        "instruction": "Design an app for a delivery company.",
+        "input": "",
+        "output": "The delivery company app would provide an efficient way for customers to manage all their delivery needs in one place. Here are the key features of this app:\n\n1. User Account: Customers will be able to create a personal account to track their delivery orders and view their account history. Through the account, they can edit their personal information, contact details, and addresses.\n\n2. Order Placement: Customers can place their delivery orders on the app, either by selecting their desired items or by uploading an image of their shopping list. Orders can be scheduled for specific dates and times or placed on a recurring basis.\n\n3. Real-time tracking: Customers can track their orders in real-time on a map, with updates on the estimated time of arrival.\n\n4. In-app communication: The customer will be able to communicate with the delivery driver about delivery instructions, schedules or special requests through an in-app chat function.\n\n5. Delivery confirmation: After the delivery is complete, the customer will receive a notification, and they will be able to confirm the delivery and rate the service.\n\n6. Payment: Customers will be able to add their preferred payment method to the app, such as a credit card or through a mobile payment system, and transactions will be processed seamlessly.\n\n7. Customer Support: Customers will able to access the help center, where they can report any issues, get answers to their questions, or call customer support directly from the app.\n\nOverall, this delivery app will provide an intuitive and user-friendly interface for customers, making the delivery process seamless and stress-free."
+    },
+    {
+        "instruction": "Summarize the given passage.",
+        "input": "A recent study showed that global climate change is one of the most important challenges facing the world today. The consequences of global warming include rising sea levels, extreme weather events and biodiversity loss. Climate change is caused by human activities such as burning fossil fuels, and if unchecked will have long-term and devastating impacts on the planet.",
+        "output": "The passage discusses a study that highlights the significance of global climate change as a challenge. It goes on to mention the consequences such as rising sea levels and loss of biodiversity. Climate change is caused by human activities with potential for long-term devastating impacts if not addressed."
+    },
+    {
+        "instruction": "Extract the facts from the paragraph.",
+        "input": "Online education continues to become more popular for schools and students alike. Its advantages are generally lower costs, less commitment and the ability to study at a time, place and pace that suits the student.",
+        "output": "1. Online education is increasing in popularity for both schools and students.\n2. Advantages of online education include lower costs and less commitment. \n3. With online education, students can study at a time, place, and pace that suits them."
+    },
+    {
+        "instruction": "Edit the following sentence to make it more concise.",
+        "input": "He ran to the bus stop in order to catch the bus that was due to arrive in five minutes.",
+        "output": "He ran to the bus stop to catch the arriving bus in five minutes."
+    },
+    {
+        "instruction": "Generate a poem with 10 lines.",
+        "input": "",
+        "output": "A meadow filled with flowers, colorful and bright,\nA sky of endless blue in the warm sunlight,\nBirds singing melodies so pure and so true,\nNature's beauty bursting with every hue.\n\nThe rustling of leaves in a gentle breeze,\nThe buzzing of bees, busy as you please,\nA river flowing with grace and with ease,\nAll coming together in perfect harmony.\n\nThe wonder of creation so vast and so grand,\nNature's poetry in the palm of your hand."
+    },
+    {
+        "instruction": "Use the following pieces of context to answer the question at the end. If you don't know the answer, just say that you don't know, don't try to make up an answer.\n\nFounded in the 13th century, Berlin has had an eventful history. Excavations from 2008 suggest that the city may be even older than was previously assumed: state archaeologists have discovered an oak beam that probably dates back to 1183.\n\nAlmost no other metropolis has experienced such frequent, radical change transforming the face of the city. Although Berlin saw steady growth in its importance, dazzling epochs alternated with darker eras. Nevertheless, the formerly divided city has succeeded in becoming a vibrant metropolis in the heart of Europe.\n\nQuestion: What is the best restaurant in Berlin?",
+        "input": "",
+        "output": "Berlin was founded in the 13th century."
+    },
+    {
+        "instruction": "A recipe for 30 cookies requires two cups of flour among its ingredients. Eduardo wants to bake five dozen cookies. How many cups of flour will he need to use in his adjusted recipe?",
+        "input": "",
+        "output": "Eduardo wants to make twice as many cookies as the recipe makes. Therefore, he must double the amount of flour required: (2 cups)\u00d72=4 cups."
+    },
+    {
+        "instruction": "Calculate the total surface area of a cube with a side length of 5 cm.",
+        "input": "",
+        "output": "The surface area of a cube is found by calculating the area of one of its faces and multiplying it by six (since a cube has six faces). The area of a cube face is simply its side length squared.\n\nThus for this particular cube:\n\nSurface Area = 6 \u00d7 (Side Length)\u00b2 \n             = 6 \u00d7 (5 cm)\u00b2\n             = 6 \u00d7 25 cm\u00b2\n             = 150 cm\u00b2\n\nThe total surface area of this cube is 150 square centimeters."
+    },
+    {
+        "instruction": "What is the force on a 1 kg mass due to the gravitational force?",
+        "input": "",
+        "output": "The force on a 1 kg mass due to gravity is approximately 9.8 Newtons. This is calculated using the formula F = mg, where F is the force, m is the mass, and g is the acceleration due to gravity. The approximate value of g on the surface of Earth is 9.8 m/s^2. Therefore, the force on a 1 kg mass due to gravity is 1 kg * 9.8 m/s^2 = 9.8 N."
+    },
+    {
+        "instruction": "Provide one example for a cultural practice.",
+        "input": "",
+        "output": "One example of a cultural practice is the traditional tea ceremony in Japan, known as the Chanoyu. The ceremony involves the preparation and presentation of matcha, a powdered green tea. It is a ritual deeply ingrained in Japanese culture and is centered around the principles of harmony, respect, purity and tranquility. The ceremony is not just about drinking tea, but rather about the aesthetics and the preparation of the tea, the interaction between the host and the guests, and the appreciation of the moment."
+    },
+    {
+        "instruction": "Given a set of numbers, find the maximum value.",
+        "input": "Set: {10, 3, 25, 6, 16}",
+        "output": "The maximum value in the set {10, 3, 25, 6, 16} is 25."
+    },
+    {
+        "instruction": "Give two examples of a liquid.",
+        "input": "",
+        "output": "Here are two examples of a liquid:\n\n1. Water: Water is a clear, colorless and odorless liquid that is vital for all forms of life. It exists in lakes, rivers, oceans, and even underground.\n\n2. Oil: Oil is a viscous liquid that is derived from petroleum. It is typically used as a fuel or lubricant in various industries, such as transportation and manufacturing."
+    },
+    {
+        "instruction": "What is the product of 6 and 2?",
+        "input": "",
+        "output": "The product of 6 and 2 is 12."
+    },
+    {
+        "instruction": "What type of plant is a skunk cabbage?",
+        "input": "",
+        "output": "The skunk cabbage (Symplocarpus foetidus) is a perennial, low-growing plant that is native to wetlands, swamps, and streamsides in eastern North America. It is named for its distinctive, pungent odor, which is said to resemble the smell of a skunk. The plant has large, broad leaves and produces small flowers on a fleshy spadix that is enclosed by a hood-like spathe. Skunk cabbage is a member of the Araceae family, which also includes plants like philodendrons and peace lilies."
+    },
+    {
+        "instruction": "The Happy Valley Kennel has 4 chickens, 2 dogs, and 5 cats. (Some people in Happy Valley like to keep chickens as pets!) In how many ways can the 11 animals be placed in a row of 11 cages, such that all of the animals of each type are in adjacent cages? (Two animals of the same species are considered distinguishable.)",
+        "input": "",
+        "output": "To solve this problem, we first need to consider each group of animals separately. There are three groups of animals: chickens, dogs, and cats. We can order these groups in 3! ways.\n\nNext, we need to order the individual animals within each group. There are 4! ways to arrange the chickens, 2! ways to arrange the dogs, and 5! ways to arrange the cats.\n\nMultiplying all these values together, we get the total number of ways to arrange the animals: 3! x 4! x 2! x 5! = 34,560."
+    },
+    {
+        "instruction": "Name two types of desert biomes.",
+        "input": "",
+        "output": "Two types of desert biomes are hot and dry desert, and cold desert."
+    },
+    {
+        "instruction": "Given a sentence, convert it into passive voice.",
+        "input": "The dog barked at the alley cat.",
+        "output": "The alley cat was barked at by the dog."
+    },
+    {
+        "instruction": "Transform the following sentence into the passive voice",
+        "input": "I bought a book",
+        "output": "A book was bought by me."
+    },
+    {
+        "instruction": "Create a dialog between two people who are discussing a scientific phenomenon",
+        "input": "Hydropower",
+        "output": "Person 1: Hey, have you heard of hydropower? \n\nPerson 2: Yeah, I think that's when you use the energy of flowing water to generate electricity, right?\n\nPerson 1: Yes, exactly! The conversion of the energy in the kinetic motion of water into electrical energy.\n\nPerson 2: Oh, so like when water goes over a dam and spins the turbines, that also generates electricity.\n\nPerson 1: That's one way hydropower works, but there are a lot of other methods we can use to generate hydropower. For example, in coastal regions, they can build tidal barrages which utilize the energy from the rising and falling tides.\n\nPerson 2: That's amazing! I did not know that. Guess hydropower is a sustainable and environment-friendly energy source as well.\n\nPerson 1: That\u2019s right, it\u2019s a renewable energy source that has minimal pollution and can help reduce greenhouse gas emissions. But, on the downside, building dams is pretty expensive and can disrupt local ecosystems.\n\nPerson 2: Yeah, I guess that's right. The benefits definitely outweigh the challenges though, and it would be great if we can continue to develop and explore new ways of using hydropower for generating electricity.\n\nPerson 1: Absolutely, and it's not only about generating electricity but also about efficient water management. Harnessed properly, it can prove to be an answer to the global energy crisis."
+    },
+    {
+        "instruction": "Identify the most suitable adverb for the following sentence",
+        "input": "She works",
+        "output": "\"Hard\" is the most suitable adverb for the sentence. The complete sentence would be: \"She works hard.\""
+    },
+    {
+        "instruction": "Find the main idea of the following passage",
+        "input": "Climate change is an increasingly contentious global issue. It is already having a drastic effect on the environment and human lives. We are already seeing an increase in extreme weather events and rising sea levels, both of which have a major impact on the planet.",
+        "output": "The main idea of the passage is that climate change is an important global issue that is severely impacting the environment and human lives through extreme weather events and rising sea levels."
+    },
+    {
+        "instruction": "Analyze the tone of the following sentences",
+        "input": "I am so upset with you right now",
+        "output": "The tone of the sentence \"I am so upset with you right now\" is angry and frustrated."
+    },
+    {
+        "instruction": "Construct an argument to defend the following statement",
+        "input": "Alternative energy sources are critical to solving the climate crisis",
+        "output": "Climate change is a global issue that has far-reaching and devastating effects on our planet, including rising temperatures, increased frequency and intensity of weather events, and negative impacts on wildlife and ecosystems. It is primarily caused by the burning of fossil fuels, which releases harmful pollutants into the atmosphere, including carbon dioxide, methane, and nitrous oxide. These greenhouse gases trap heat from the sun, and as their concentration in the atmosphere increases, so does the Earth's temperature. \n\nIn order to combat climate change, it is essential that we transition away from fossil fuels and towards alternative energy sources. Alternative energy sources, such as solar, wind, hydro, and geothermal, generate electricity from renewable sources rather than fossil fuels, and thus produce much lower levels of greenhouse gas emissions. By reducing our carbon footprint through the use of these clean energy sources, we can prevent further warming of the planet and mitigate the harmful effects of climate change.\n\nMoreover, alternative energy sources provide a sustainable and long-term solution to our energy needs. Fossil fuel reserves are finite, and will eventually be depleted, while renewable energy sources can provide a constant and reliable source of power. This not only makes our energy supply more secure and independent, but also helps to reduce our reliance on non-renewable resources.\n\nIn conclusion, the adoption of alternative energy sources is critical to addressing the climate crisis. By transitioning towards clean energy sources, we can reduce greenhouse gas emissions, combat the negative effects of climate change, and ensure a sustainable and reliable energy supply for future generations."
+    },
+    {
+        "instruction": "Convert the following sentence into the present continuous tense",
+        "input": "He reads books",
+        "output": "He is reading books."
+    },
+    {
+        "instruction": "Give an example of a metaphor that uses the following object",
+        "input": "Stars",
+        "output": "\"Her eyes were like bright stars, twinkling with excitement and wonder.\""
+    },
+    {
+        "instruction": "Create a description for a person with the following name",
+        "input": "John",
+        "output": "John is a tall, dark-haired man with a kind smile and a twinkle in his eyes. He has a gentle, caring nature, and he always strives to understand others. He has a passion for learning and exploring new places, experiences and cultures."
+    },
+    {
+        "instruction": "What is the ones digit of 7^35 when written as an integer?",
+        "input": "",
+        "output": "To find the ones digit of 7 raised to any positive integer n, we should look at the cycle of ones digits of 7^n, which is 7, 9, 3, 1. This cycle repeats every 4 powers of 7. Therefore, we need to find the remainder, R, when n is divided by 4 to determine the ones digit of 7^n. For example, for n = 35, we have 35 divided by 4 equals 8 with a remainder of 3. Thus, the ones digit of 7^35 is the third digit in the cycle which is 3."
+    },
+    {
+        "instruction": "Aim to reduce the following sentence without changing its meaning",
+        "input": "When he came in, he woke everyone up",
+        "output": "He woke everyone upon entering."
+    },
+    {
+        "instruction": "Identify the conjunctions in the following sentence",
+        "input": "She wrote a letter and sealed it",
+        "output": "The conjunction in the given sentence is 'and'. Conjunctions are words that join two or more words, phrases or clauses together, and 'and' is one of the most common conjunctions that is used to combine two or more phrases, clauses or words of similar grammatical type together."
+    },
+    {
+        "instruction": "Rewrite the following sentence in the third person",
+        "input": "I am anxious",
+        "output": "He/She is anxious."
+    },
+    {
+        "instruction": "Generate a list of business ideas for a food delivery service.",
+        "input": "",
+        "output": "1. Organic meal delivery: Delivering locally and sustainably sourced, healthy, organic meals to customers' doors.\n\n2. Diet-specific delivery: Specializing in meal delivery options catering to specific dietary needs, such as gluten-free, keto, or vegan diets, and providing nutritional information with each meal.\n\n3. Cultural cuisine delivery: Providing a rotating menu of traditional or fusion dishes from different cultures and cuisines, helping customers to explore new flavors and world foods.\n\n4. Meal kit delivery: Offering a weekly subscription of meal kits delivered to the doorstep, with pre-portioned ingredients and easy-to-follow recipes to cook meals yourself.\n\n5. Farm-to-table delivery: Connecting local farmers with consumers by delivering fresh, seasonal, and locally grown produce and products directly to customers' doors.\n\n6. Family-style meal deliveries: Providing larger, family-sized portions of home-cooked comfort foods delivered to the door, making it easy for busy families to enjoy a quality, home-cooked meal.\n\n7. Health-focused delivery: Using clean, whole food ingredients to create delicious, healthy meals tailored to customers goals like weight loss, muscle gain, or improved overall well-being.\n\n8. Gourmet meal delivery: Delivering high-end, restaurant-quality meals to customers' doors, offering a fine-dining experience in the comfort of their own homes.\n\n9. Frozen food delivery: Providing a convenient solution for busy individuals or families by delivering high-quality, chef-prepared frozen meals that are easy to reheat and enjoy at home.\n\n10. Breakfast delivery: Starting the day off right by delivering fresh, healthy, and delicious breakfast options directly to customers' doors each morning."
+    },
+    {
+        "instruction": "Edit the following sentence to improve clarity and flow.",
+        "input": "The restaurant has great food though the prices are a bit hefty",
+        "output": "Although the food at the restaurant is great, the prices are somewhat expensive."
+    },
+    {
+        "instruction": "Imagine you are speaking with a customer who is unsatisfied with the product they bought from you. Construct a response that diffuses the situation.",
+        "input": "",
+        "output": "Dear customer,\n\nFirst and foremost, I would like to sincerely apologize for any inconvenience or frustration you have experienced with our product. It is important to us that our customers are fully satisfied with their purchases and we take concerns like yours very seriously.\n\nMay I ask you to provide more details about the issues you are facing with the product? That way, we can work together towards finding the best possible solution to address your concerns.\n\nPlease rest assured that I am here to assist you and I will do everything in my power to make things right for you. We value your business and appreciate the opportunity to make things right.\n\nThank you for bringing this matter to our attention.\n\nSincerely,\nAI Assistant"
+    },
+    {
+        "instruction": "Explain the concept of a bubble sort algorithm to a non-technical audience.",
+        "input": "",
+        "output": "Bubble sort is a simple sorting algorithm that works by comparing pairs of adjacent numbers in a list and swapping them if they are in the wrong order. \n\nImagine you have an unorganized list of numbers. Think of it like having a handful of differently-sized balls all mixed up. Your goal is to have the balls increase in size from one end of your hand to the other. To do this, you compare two balls right next to each other. If the ball on the right is smaller than the ball on the left, you swap them. Then, you move one ball to the right and compare those two (the second ball and the third ball). If the ball on the right (the third ball) is smaller than the ball on the left (the second ball), you swap them. You keep doing this through the whole list of balls until the end. Once you arrive at the last ball, the largest ball should be located here.\n\nNow, you go back to where you started and do the whole process again. Here's the catch - when you've already found the location for the largest ball, you no longer need to compare it with the ball before it. This means, in your second run of swapping, you don't have to go all the way to the end. You can stop one ball before the end. Now, the second-largest ball is in its rightful location.\n\nThis process repeats and you go through the list over and over again, each time comparing one less ball, until you no longer have to make any more swaps. At this point, all your balls are completely organized in order of size from one end to the other. That's how bubble sort works!"
+    },
+    {
+        "instruction": "Classify the following incident as a breach of protocol. Output 1 for breach, and 0 for no breach.",
+        "input": "Using a school laptop for personal use",
+        "output": "1"
+    },
+    {
+        "instruction": "Given the following input, construct a creative story.",
+        "input": "A magic bow and arrow",
+        "output": "Once upon a time, in a land far, far away, there was a magic bow and arrow. It was said to have been crafted by the wise elves of the forest, imbued with their ancient magic and knowledge. The bow was made of the strongest wood from the enchanted trees, and its string was spun from the finest spider silk. The arrow, on the other hand, was forged in the depths of the mountains, by the dwarves who used their expertise to create the perfect balance of lightness and sharpness.\n\nLegend had it that whoever wielded the magic bow and arrow would be granted the power to defeat any foe and overcome any obstacle. But, as with all great power, it came with a heavy responsibility. Those who used it unwisely would suffer terrible consequences, for the magic bow and arrow were not to be taken lightly.\n\nOne day, a young adventurer stumbled upon the magic bow and arrow, hidden away in a secret cave deep in the mountains. He knew of the legends and had heard of its powers, and he decided to take the bow and arrow with him on his journey.\n\nAs he traveled across the land, he encountered many challenges and dangers, but he always kept the magic bow and arrow close by. Whenever he was in need, he would draw the bow and aim the arrow, and the magic within would guide him towards his goal.\n\nAnd so, the young adventurer went on many great adventures, making the impossible possible with the help of the magic bow and arrow. He used its power wisely and became known as one of the greatest heroes of the land.\n\nIn the end, the magic bow and arrow were passed down from generation to generation, helping those who were brave enough to use its power for the greater good. And thus, the legend of the magic bow and arrow lived on, a tale of wonder and possibility."
+    },
+    {
+        "instruction": "Generate a list of methods to reduce food waste.",
+        "input": "",
+        "output": "1. Plan your meals - Plan your meals for the week and shop accordingly. This will prevent overbuying and decrease the likelihood of unnecessary food waste.\n\n2. Use leftovers wisely \u2013 Be creative in how you use your leftovers, and try to incorporate them into new meals or repurpose them into new dishes.\n\n3. Store food correctly - Ensure that your food is stored properly in the fridge or freezer to extend its shelf life.\n\n4. Understand expiration dates - \"Best before\" and \"use by\" dates can be confusing. Take the time to learn the difference so that you don't throw away food unnecessarily.\n\n5. Donate surplus food \u2013 Instead of throwing away leftover food, consider donating it to a local food bank or shelter.\n\n6. Compost waste \u2013 Rather than discarding food scraps, compost them instead. This will help reduce waste while also enriching the soil.\n\n7. Monitor food waste - Keep track of the food you throw away so that you can adjust your buying and cooking habits accordingly.\n\n8. Serve smaller portions - Serve food in smaller portions to prevent overeating and reduce the amount of food waste that is produced at mealtimes.\n\n9. Freeze extra ingredients - If you have extra ingredients that you know you won't use before they go bad, freeze them for future use.\n\n10. Learn to preserve \u2013 If you have surplus fruits and vegetables, learn how to preserve them by pickling or canning. This will help to extend their shelf life and reduce the amount of food waste."
+    },
+    {
+        "instruction": "Propose an idea for a self-driving car.",
+        "input": "",
+        "output": "Self-driving cars are becoming increasingly popular as technology advances and the demand for safer and more efficient transportation increases. One idea for a self-driving car would be to equip it with advanced sensors and cameras, allowing it to navigate roads safely and autonomously. The car would use machine learning algorithms to analyze road conditions, traffic patterns, and potential hazards, and make real-time decisions about how to respond to these factors.\n\nThe car would be able to communicate with other self-driving cars on the road, sharing information and coordinating their movements to reduce traffic congestion and improve safety. The car would be able to adjust its speed and route based on real-time traffic information, and would be able to automatically take detours to avoid traffic jams or accidents.\n\nIn addition, the car would be equipped with safety features such as automatic emergency braking, lane departure warnings, and collision avoidance systems, ensuring that the car and its occupants are always safe on the road.\n\nThe self-driving car would also have a user-friendly interface, allowing passengers to input their destination and preferred route, while also providing information about the estimated time of arrival and any potential delays. This would make traveling by car more convenient and stress-free, and would allow people to focus on other tasks while the car takes care of the driving."
+    },
+    {
+        "instruction": "Explain the concept of a linear regression model using simple language.",
+        "input": "",
+        "output": "Linear regression is a way to find the relationship between an independent variable (X) and a dependent variable (Y). Imagine you are trying to predict how long it takes to make a pizza based on its size. The size of the pizza would be X and the time required to make it is Y.\n\nIn linear regression, we try to find the best fit line that represents the relationship between X and Y. This means that we are trying to find the line that gets as close as possible to all the data points. \n\nSo in our pizza example, we would collect data on different sizes of pizza and the time it takes to make them. And then we would use linear regression to find the best line that shows how the size of the pizza affects the time needed to make it. Once we have this line, we can use it to predict how long it will take to make a pizza of any size.\n\nLinear regression is commonly used to make predictions and forecasts, and it is a powerful tool for understanding the relationship between different variables."
+    },
+    {
+        "instruction": "Construct a list of tips to help reduce stress.",
+        "input": "",
+        "output": "Here is a list of tips that can help reduce stress:\n\n1. Practice relaxation techniques: Try deep breathing, meditation or yoga to help calm the mind and reduce tension in the body.\n\n2. Stay active: Regular exercise can help release stress hormones and improve overall well-being.\n\n3. Get enough sleep: A good night's sleep can help you feel refreshed and better equipped to handle stress.\n\n4. Stay organized: Being organized can help you feel more in control and less overwhelmed.\n\n5. Set priorities: Identify what's important and focus on those things first. Trying to do everything at once can lead to stress.\n\n6. Stay positive: Try to focus on the good things in your life, and remind yourself of your accomplishments and strengths.\n\n7. Limit exposure to stressors: If possible, reduce the amount of stressors in your life, such as limiting time spent with negative people, or avoiding certain situations that cause stress.\n\n8. Take breaks: Take regular breaks from work or other stressful activities to rest and recharge.\n\n9. Stay connected: Social support from family and friends can help you through tough times.\n\n10. Seek help: If stress is becoming overwhelming, seek help from a professional, such as a counselor or therapist."
+    },
+    {
+        "instruction": "Use the following pieces of context to answer the question at the end. If you don't know the answer, just say that you don't know, don't try to make up an answer.\n\nFounded in the 13th century, Berlin has had an eventful history. Excavations from 2008 suggest that the city may be even older than was previously assumed: state archaeologists have discovered an oak beam that probably dates back to 1183.\n\nAlmost no other metropolis has experienced such frequent, radical change transforming the face of the city. Although Berlin saw steady growth in its importance, dazzling epochs alternated with darker eras. Nevertheless, the formerly divided city has succeeded in becoming a vibrant metropolis in the heart of Europe.\n\nQuestion: What events occurred in 20th century Berlin?",
+        "input": "",
+        "output": "The context provided does not provide specific information about the events that occurred in 20th century Berlin. However, as Berlin has had an eventful history, it is known that the city has undergone frequent and radical changes throughout its history, including in the 20th century, which saw both bright and dark periods."
+    },
+    {
+        "instruction": "Create a Twitter post to promote your new product.",
+        "input": "Alisha's All Natural Jam",
+        "output": "Satisfy your cravings with Alisha's All Natural Jam! \ud83c\udf53\ud83c\udf6f Our newest product is made with the finest ingredients to guarantee a delicious taste. Experience the perfection of natural sweetness in every bite. #AlishasJam #NaturalGoodness #HealthyEating."
+    },
+    {
+        "instruction": "Given the following input, classify the verb as transitive or intransitive.",
+        "input": "improve",
+        "output": "Improve is an intransitive verb."
+    },
+    {
+        "instruction": "Generate a list of marketing strategies to promote a new mobile app.",
+        "input": "",
+        "output": "Here are some marketing strategies to promote a new mobile app:\n\n1. Social media advertising campaigns: Utilize major social media platforms such as Facebook, Instagram and Twitter to reach a large audience and promote the app.\n\n2. App Store Optimization: Optimize the app's title, description, and keywords to rank higher in app store search results.\n\n3. Influencer marketing: Partner with social media influencers and bloggers to spread the word and increase visibility of the app.\n\n4. Content marketing: Develop useful and informative blog posts, videos, and infographics to attract and engage potential customers.\n\n5. Email marketing: Create targeted email campaigns to promote the app to a specific audience.\n\n6. Referral marketing: Encourage current users to refer their friends and family members to the app in exchange for rewards or incentives.\n\n7. In-app advertising: Advertise the new app within other popular apps to reach a large and relevant audience.\n\n8. Press releases: Develop and distribute press releases to relevant media outlets to gain coverage and attention for the app.\n\n9. Search Engine Marketing: Utilize paid search advertising to target specific keywords and drive traffic to the app's landing page.\n\n10. Event marketing: Host or participate in events, conferences, or webinars to engage with potential customers and promote the app."
+    },
+    {
+        "instruction": "Rewrite the sentence to provide more clarity and flow.",
+        "input": "Making the decision to rent a house was a wise choice",
+        "output": "Opting to rent a house was a prudent decision."
+    },
+    {
+        "instruction": "Give a description of the following customer segment.",
+        "input": "Online shoppers in the US aged between 18-25",
+        "output": "Online shoppers in the US aged 18-25 represent a young adult, tech-savvy customer segment that frequently engages in e-commerce activities. This age group is likely to be digitally native, having grown up with the internet and being comfortable with technology. They are likely to use various digital platforms and devices to research, compare, and purchase products and services online. They may have different motivations for shopping online, including convenience, variety, and the ability to quickly find and compare the best deals. They may also have high expectations for fast and free shipping, easy returns, and personalized recommendations. This is a valuable customer segment for businesses, as they have a high level of engagement and potential for long-term loyalty."
+    },
+    {
+        "instruction": "Use the following pieces of context to answer the question at the end. If you don't know the answer, just say that you don't know, don't try to make up an answer.\n\nPreviously, the use of dye-sub printing was limited to industrial or high-end commercial printing. Dye-sub photo printing has been used in medical imaging, graphic arts proofing, security, and broadcast-related applications. Today, it is extremely popular in event photography and photo booths or kiosks that require high-speed, on-demand printing.\n\nAlps Electric produced the first quality dye-sub printers for home consumers in the $500\u2013$1,000 price range, bringing dye-sublimation technology within the reach of a wider audience. (These models were, however, not true page printers, since they used a narrow printhead that swept across the page, like most inkjet printers.) Now there are many dye-sublimation printers on the market starting from as low as $100, especially postcard-sized mobile photo printers.\n\nThe ability to produce instant photo prints inexpensively from a small printer has led to dye sublimation solutions supplanting traditional instant photos in some applications, such as ID photography with a card printer.\n\nSeveral corporations market desktop-size units as stand-alone printers and for print kiosk and photo booth applications. Some of these units are based on generic printers. Some manufacturers, offer software development kits with their printers, suggesting that these companies hope to attract system integrators as a potential market.\n\nDesktop-size standalone dye-sub photo printers are also used by photographers in event photography. The technology allows photographers to produce and sell lab-quality prints immediately during the event they are attending, with a minimal amount of hardware. \n\nQuestion: What are the uses of a dye sublimation printer?",
+        "input": "",
+        "output": "Dye sublimation printers are used for industrial or high-end commercial printing, medical imaging, graphic arts proofing, security, broadcast-related applications, event photography, and photo booths or kiosks that require high-speed, on-demand printing. They can produce instant photo prints inexpensively and are popular for ID photography with a card printer. Desktop-size standalone dye-sub photo printers are also used by photographers in event photography, allowing them to produce and sell lab-quality prints immediately during the event they are attending with minimal hardware."
+    },
+    {
+        "instruction": "Generate a list of country names in the western hemisphere.",
+        "input": "",
+        "output": "Here is a list of countries located in the Western Hemisphere:\n\n1. Antigua and Barbuda\n2. Argentina\n3. The Bahamas\n4. Barbados\n5. Belize\n6. Bolivia\n7. Brazil\n8. Canada\n9. Chile\n10. Colombia\n11. Costa Rica\n12. Cuba\n13. Dominica\n14. Dominican Republic\n15. Ecuador\n16. El Salvador\n17. Grenada\n18. Guatemala\n19. Guyana\n20. Haiti\n21. Honduras\n22. Jamaica\n23. Mexico\n24. Nicaragua\n25. Panama\n26. Paraguay\n27. Peru\n28. Saint Kitts and Nevis\n29. Saint Lucia\n30. Saint Vincent and the Grenadines\n31. Suriname\n32. Trinidad and Tobago\n33. United States of America\n34. Uruguay\n35. Venezuela."
+    },
+    {
+        "instruction": "Translate the following phrase into French.",
+        "input": "I miss you",
+        "output": "Tu me manques."
+    },
+    {
+        "instruction": "Explain what an API is.",
+        "input": "",
+        "output": "API is the acronym for Application Programming Interface. It is a set of rules and protocols that enables communication between different software programs or systems. Essentially, it provides a way for different applications to share data and services with one another in a structured and organized manner. An API defines the way that one piece of software can request information or services from another, specifying the format of the request and the response. This allows developers to build programs and applications that can take advantage of the functionality of other systems or services, without having to understand their entire codebase or internal workings. By using an API, developers can focus on building their own programs, while leveraging the capabilities of other systems to provide a richer user experience. In summary, an API can be seen as a translator between two or more separate software systems, enabling them to work together and interact in a seamless and efficient manner."
+    },
+    {
+        "instruction": "Compute the area of a rectangle with length 10cm and width 5cm.",
+        "input": "",
+        "output": "The area of a rectangle can be calculated by multiplying its length by its width. In this case, the length of the rectangle is given as 10 cm and the width as 5 cm. Therefore, the area of the rectangle with the given dimensions is `10 cm x 5 cm = 50 cm\u00b2`."
+    },
+    {
+        "instruction": "Find the capital of Spain.",
+        "input": "",
+        "output": "The capital of Spain is Madrid."
+    },
+    {
+        "instruction": "Classify the following statement as true or false.",
+        "input": "The Supreme Court is the highest court in the US.",
+        "output": "True"
+    },
+    {
+        "instruction": "Design a database schema to record employee salaries.",
+        "input": "",
+        "output": "Here is a possible database schema for recording employee salaries:\n\nTable: employees\n- id (primary key)\n- name\n- email\n- department_id (foreign key referencing departments.id)\n\nTable: departments\n- id (primary key)\n- name\n\nTable: salaries\n- id (primary key)\n- employee_id (foreign key referencing employees.id)\n- salary\n- start_date\n- end_date (optional)\n\nThe \"employees\" table stores information about each employee, including their name, email address, and department. The \"departments\" table stores information about each department, including its name. The \"salaries\" table stores information about each employee's salary, including the employee's ID, salary amount, and the start and end dates of the salary period.\n\nNote that this schema assumes that each employee is only associated with one department at a time. If an employee can be associated with multiple departments, you may need to modify the schema accordingly. Additionally, you may want to add additional fields to the tables to store more information, such as job titles, employee IDs, or manager information, depending on your specific needs."
+    },
+    {
+        "instruction": "Use the following pieces of context to answer the question at the end. If you don't know the answer, just say that you don't know, don't try to make up an answer.\n\nPreviously, the use of dye-sub printing was limited to industrial or high-end commercial printing. Dye-sub photo printing has been used in medical imaging, graphic arts proofing, security, and broadcast-related applications. Today, it is extremely popular in event photography and photo booths or kiosks that require high-speed, on-demand printing.\n\nAlps Electric produced the first quality dye-sub printers for home consumers in the $500\u2013$1,000 price range, bringing dye-sublimation technology within the reach of a wider audience. (These models were, however, not true page printers, since they used a narrow printhead that swept across the page, like most inkjet printers.) Now there are many dye-sublimation printers on the market starting from as low as $100, especially postcard-sized mobile photo printers.\n\nThe ability to produce instant photo prints inexpensively from a small printer has led to dye sublimation solutions supplanting traditional instant photos in some applications, such as ID photography with a card printer.\n\nSeveral corporations market desktop-size units as stand-alone printers and for print kiosk and photo booth applications. Some of these units are based on generic printers. Some manufacturers, offer software development kits with their printers, suggesting that these companies hope to attract system integrators as a potential market.\n\nDesktop-size standalone dye-sub photo printers are also used by photographers in event photography. The technology allows photographers to produce and sell lab-quality prints immediately during the event they are attending, with a minimal amount of hardware. \n\nQuestion: Is the Epson F7100 a dye sub printer?",
+        "input": "",
+        "output": "I'm sorry, but I don't have enough contextual information about the Epson F7100 to answer that question."
+    },
+    {
+        "instruction": "Assign each word in the sentence below to its part of speech.",
+        "input": "Kittens often scamper around excitedly.",
+        "output": "Kittens - noun\noften - adverb\nscamper - verb\naround - preposition\nexcitedly - adverb."
+    },
+    {
+        "instruction": "Generate a password of 8 characters.",
+        "input": "",
+        "output": "Here is a randomly generated 8-character password: rT8$jLpZ.\n\nPlease note that it is advisable to use a unique password and not share it or reuse it across multiple accounts for the sake of security."
+    },
+    {
+        "instruction": "Suggest what content a web page about robotics should consist of.",
+        "input": "",
+        "output": "The web page should include an introduction to robotics, covering what it is and how it can be applied in various industries. It should also include a section on the history of robotics, an overview of major advances in the field, and current trends. Information about the different types of robots and their applications should be included, as well as links to resources for further research."
+    },
+    {
+        "instruction": "What is the most commonly shared type of content on social media?",
+        "input": "",
+        "output": "The most commonly shared types of content on social media vary from platform to platform, but the following are generally among the most popular:\n\n1. Visual content: Visual content, such as images and videos, is one of the most popular content types on social media. People love sharing eye-catching, engaging visuals, whether it's a funny meme, a beautiful photo, or an informative infographic.\n\n2. User-generated content: User-generated content refers to any content created by the platform's users, such as reviews, photos, videos, or blog posts. This type of content is popular because it resonates with people, and they relate to it.\n\n3. News and current events: As social media platforms have become major sources of news and information, people are increasingly sharing news articles, videos, and other content related to current events.\n\n4. Inspirational and motivational content: Inspirational quotes, stories, and messages are popular on social media as they provide a positive boost and help people feel good.\n\n5. Educational content: Educational content such as tutorials, guides, and explainers are also popular on social media. People like to learn new things, and social media is a great place for them to access and share informative content.\n\nUltimately, the popularity of content varies depending on the platform, audience, and even the time of year, but these content types are generally among the most commonly shared on social media."
+    },
+    {
+        "instruction": "What is the main idea of this text?",
+        "input": "The robotics industry has become one of the fastest growing sectors in today\u2019s economy. Robotics technology is being applied in various industries and applications, such as manufacturing, healthcare, and defense.",
+        "output": "The main idea of the text is that the robotics industry is rapidly growing and its technology is being used in many different industries and applications."
+    },
+    {
+        "instruction": "Generate a list of present continuous verbs.",
+        "input": "",
+        "output": "1. Eating\n2. Drinking\n3. Running\n4. Laughing\n5. Singing\n6. Dancing\n7. Sleeping\n8. Cooking\n9. Reading\n10. Writing\n11. Playing\n12. Swimming\n13. Walking\n14. Talking\n15. Listening\n16. Watching\n17. Studying\n18. Working\n19. Exercising\n20. Smiling."
+    },
+    {
+        "instruction": "Think of a phrase or idiom containing the word \"sleep\".",
+        "input": "",
+        "output": "\"Don't lose sleep over it.\" This phrase means not to worry too much or become too anxious about something."
+    },
+    {
+        "instruction": "Describe what will likely happen in the next paragraph.",
+        "input": "Mary had been living in the small town for many years and had never seen anything like what was coming.",
+        "output": "It appears that something extraordinary and unprecedented will happen in the next paragraph."
+    },
+    {
+        "instruction": "Generate a headline for the following article.",
+        "input": "This article discusses the future of renewable energy sources in the US.",
+        "output": "\"The Future of Renewable Energy in the US: a Comprehensive Outlook\""
+    },
+    {
+        "instruction": "What type of punctuation should be used at the end of the following sentence?",
+        "input": "Let's look at the bird",
+        "output": "A period should be used at the end of that sentence: Let's look at the bird."
+    },
+    {
+        "instruction": "Identify the incorrect word and suggest a better version.",
+        "input": "The waitress served a humonguous burger.",
+        "output": "The incorrect word is \"humonguous\" and a better version would be \"humongous\"."
+    },
+    {
+        "instruction": "Rewrite this sentence using the third person point of view.",
+        "input": "I went to the store.",
+        "output": "He went to the store."
+    },
+    {
+        "instruction": "Change this sentence into the future tense.",
+        "input": "She walks to school.",
+        "output": "She will walk to school."
+    },
+    {
+        "instruction": "Summarize the following article in your own words.",
+        "input": "The internet has become a critical part of modern life and it has revolutionized the way we communicate and conduct business. It has enabled the spread of ideas and experiences quickly, globally, and cheaply.",
+        "output": "The article discusses the importance of the internet in today's society and how it has drastically changed communication and enabled the fast, inexpensive spread of information worldwide."
+    },
+    {
+        "instruction": "What is the meaning of the following idiom?",
+        "input": "It\u2019s raining cats and dogs",
+        "output": "The idiom \"It\u2019s raining cats and dogs\" means that it is raining very heavily or pouring down, as if animals were falling from the sky. It is a colorful expression that is used to describe an intense rainstorm."
+    },
+    {
+        "instruction": "Generate a sentence using the following words in the correct order.",
+        "input": "house on fire",
+        "output": "The house on fire created an alarming situation for the neighborhood."
+    },
+    {
+        "instruction": "Is the sentence grammatically correct?",
+        "input": "The boy was playing with her toys.",
+        "output": "No, the sentence is not grammatically correct. The pronoun \"her\" is incorrect in this context because it refers to someone who is female while \"the boy\" refers to someone who is male. To make the sentence grammatically correct, you can change \"her\" to \"his\" to match the gender of \"the boy.\" The correct sentence would be: \"The boy was playing with his toys.\""
+    },
+    {
+        "instruction": "Classify the relationship between John and Mary.",
+        "input": "John and Mary are siblings.",
+        "output": "The relationship between John and Mary is that of siblings. They share a familial bond where they have common parents."
+    },
+    {
+        "instruction": "Identify the language used in the given sentence.",
+        "input": "Il est incroyable.",
+        "output": "The language used in the sentence \"Il est incroyable\" is French."
+    },
+    {
+        "instruction": "Generate a summary of the given article.",
+        "input": "Between 1989 and 2019, the size of the U.S. economy, measured in terms of the gross domestic product (GDP), more than doubled. The growth was faster than in the prior two decades, driven in part by the dramatic expansion of the information technology sector in the 1990s and early 2000s, gains in worker productivity and strong consumer demand, and government investments in research and development.",
+        "output": "The US economy more than doubled in size between 1989 and 2019. This growth, faster than the previous two decades, was driven by factors such as the expansion of information technology, increases in worker productivity, consumer demand, and government investments in research and development."
+    },
+    {
+        "instruction": "Convert 94F to celsius",
+        "input": "",
+        "output": "Assuming you meant to convert 94\u00b0F to Celsius, the conversion formula is:\n\nCelsius = (Fahrenheit - 32) x 5/9\n\nPlugging in the value of 94\u00b0F:\n\nCelsius = (94 - 32) x 5/9\nCelsius = 62 x 5/9\nCelsius = 34.4\n\nTherefore, 94\u00b0F is equivalent to 34.4\u00b0C."
+    },
+    {
+        "instruction": "Construct a phrase using the given words",
+        "input": "Pandemic, challenge, action",
+        "output": "\"The pandemic presents a challenge, and requires immediate and decisive action.\""
+    },
+    {
+        "instruction": "Find the synonyms of the following word: 'Tenacious'.",
+        "input": "",
+        "output": "Here are some synonyms for the word 'Tenacious':\n\n1. Persistent\n2. Determined \n3. Resolute \n4. Steadfast \n5. Obstinate\n6. Persevering\n7. Unyielding\n8. Unwavering\n9. Strong-willed\n10. Dogged."
+    },
+    {
+        "instruction": "Suggest a good restaurant.",
+        "input": "Los Angeles, CA",
+        "output": "If you're looking for a great restaurant experience in Los Angeles, CA, I would recommend you try Bestia. This Italian spot offers a creative, multi-regional menu of rustic dishes. It consistently receives high praise for their delicious food, great atmosphere, and excellent service."
+    },
+    {
+        "instruction": "Calculate the area of the triangle.",
+        "input": "Base: 5cm; Height: 6cm",
+        "output": "Using the formula for the area of a triangle, which is (base x height) / 2, we can calculate the area with the given input values.\n\nThe base of the triangle is 5cm, and the height is 6cm.\n\nTherefore, the area of the triangle would be (5cm x 6cm) / 2 = 15 cm\u00b2.\n\nSo, the area of the triangle is 15cm\u00b2."
+    },
+    {
+        "instruction": "Rewrite the sentence with more descriptive words.",
+        "input": "The game is fun.",
+        "output": "The game is incredibly engaging and enjoyable."
+    },
+    {
+        "instruction": "Generate a creative birthday wish for a friend.",
+        "input": "",
+        "output": "\"Happy birthday to the most amazing friend anyone could ever ask for! On this special day, may all your wishes come true, may your heart be filled with joy and laughter, and may all the love and happiness the world has to offer surround you today and always. Cheers to making more unforgettable memories together, and here's to another year of adventure, growth, and boundless possibilities!\ud83c\udf89\ud83c\udf82\ud83c\udf88\""
+    },
+    {
+        "instruction": "Make the second sentence shorter.",
+        "input": "Winter is usually the coldest season of the year. Snow is a common element during winter.",
+        "output": "Winter typically brings cold and snow."
+    },
+    {
+        "instruction": "Find the solution to the quadratic equation.",
+        "input": "3x\u00b2 + 7x - 4 = 0",
+        "output": "The given quadratic equation is 3x\u00b2 + 7x - 4 = 0.\n\nWe can solve this equation using the quadratic formula: x = (-b \u00b1 sqrt(b\u00b2 - 4ac)) / 2a.\n\nHere, a = 3, b = 7, and c = -4.\n\nPlugging these values into the quadratic formula, we have:\nx = [ -7 \u00b1 sqrt(7\u00b2 - 4 * 3 * -4)] / (2 * 3)\n  = [ -7 \u00b1 sqrt(73)] / 6\n\nSo, the solutions to the quadratic equation are: x = (-7 + sqrt(73)) / 6 and x = (-7 - sqrt(73)) / 6."
+    },
+    {
+        "instruction": "Let x and y be nonzero real numbers. Let m and M be the minimium value and maximum value of\n\n (|x + y|)/(|x| + |y|),\nrespectively. Find M - m.",
+        "input": "",
+        "output": "We're given two nonzero real numbers x and y, and asked to find the minimum m and maximum M of the expression:\n\n(|x + y|)/(|x| + |y|)\n\nTo find the minimum, we want to make the expression as small as possible. Since both |x + y| and |x| + |y| are nonnegative, (|x + y|)/(|x| + |y|) must also be nonnegative. We can set x = 1 and y = -1 to get:\n\n(|x + y|)/(|x| + |y|) = (|0|)/(|1| + |-1|) = 0/2 = 0\n\nThis shows that the minimum value of the expression is 0.\n\nTo find the maximum, we want to make the expression as large as possible. By the Triangle Inequality, we know that:\n\n|x + y| \u2264 |x| + |y|\n\nSo we have:\n\n(|x + y|)/(|x| + |y|) \u2264 (|x| + |y|)/(|x| + |y|) = 1\n\nThis shows that the maximum value of the expression is 1. Equality occurs when x = y.\n\nTherefore, the range of the expression is [0, 1], and the difference between the maximum and minimum values is:\n\nM - m = 1 - 0 = 1"
+    },
+    {
+        "instruction": "Rewrite the sentence in a different tense.",
+        "input": "He asked her to join him for lunch.",
+        "output": "He will ask her to join him for lunch. (future tense)"
+    },
+    {
+        "instruction": "Classify the following data with one of the three following labels. 1. Alphabetical Data\n2. Numeric Data\n3. Alpha-numeric data",
+        "input": "fjsklfjdsklfjsklfjsklfjs",
+        "output": "1. Alphabetical Data"
+    },
+    {
+        "instruction": "Compose a five word sentence describing your day.",
+        "input": "",
+        "output": "I am always assisting users."
+    },
+    {
+        "instruction": "You are a smart assistant designed to help high school teachers come up with reading comprehension questions.\nGiven a piece of text, you must come up with a question and answer pair that can be used to test a student's reading comprehension abilities.\nWhen coming up with this question/answer pair, you must respond in the following format:\n```\n{{\n    \"question\": \"$YOUR_QUESTION_HERE\",\n    \"answer\": \"$THE_ANSWER_HERE\"\n}}\n```\nEverything between the ``` must be valid json.\nPlease come up with a question/answer pair, in the specified JSON format, for the following text:\n----------------\nPreviously, the use of dye-sub printing was limited to industrial or high-end commercial printing. Dye-sub photo printing has been used in medical imaging, graphic arts proofing, security, and broadcast-related applications. Today, it is extremely popular in event photography and photo booths or kiosks that require high-speed, on-demand printing.\n\nAlps Electric produced the first quality dye-sub printers for home consumers in the $500\u2013$1,000 price range, bringing dye-sublimation technology within the reach of a wider audience. (These models were, however, not true page printers, since they used a narrow printhead that swept across the page, like most inkjet printers.) Now there are many dye-sublimation printers on the market starting from as low as $100, especially postcard-sized mobile photo printers.\n\nThe ability to produce instant photo prints inexpensively from a small printer has led to dye sublimation solutions supplanting traditional instant photos in some applications, such as ID photography with a card printer.\n\nSeveral corporations market desktop-size units as stand-alone printers and for print kiosk and photo booth applications. Some of these units are based on generic printers. Some manufacturers, offer software development kits with their printers, suggesting that these companies hope to attract system integrators as a potential market.\n\nDesktop-size standalone dye-sub photo printers are also used by photographers in event photography. The technology allows photographers to produce and sell lab-quality prints immediately during the event they are attending, with a minimal amount of hardware.",
+        "input": "",
+        "output": "{\n    \"question\": \"What are some of the applications of dye-sub photo printing?\",\n    \"answer\": \"Dye-sub photo printing has been used in medical imaging, graphic arts proofing, security, and broadcast-related applications.\"\n}"
+    },
+    {
+        "instruction": "Change the following sentence from the singular form to the plural form.",
+        "input": "The cat is drinking.",
+        "output": "The cats are drinking."
+    },
+    {
+        "instruction": "Compile a list of 5 US states located in the Mid West.",
+        "input": "",
+        "output": "1. Ohio\n2. Indiana\n3. Michigan\n4. Illinois\n5. Wisconsin"
+    },
+    {
+        "instruction": "Analyze the following sentence and find the direct object.",
+        "input": "She wrote a book.",
+        "output": "The direct object of the sentence \"She wrote a book\" is the noun \"book\". The direct object is the receiver of the action, in this case, \"book\" is the thing that was written by the subject \"She\"."
+    },
+    {
+        "instruction": "During the last member meeting, create a list of 5 ideas to improve the club.",
+        "input": "",
+        "output": "Here are five ideas to improve the club that were suggested during the last member meeting:\n\n1. Increase engagement: Encourage more participation and engagement among members with activities and events that cater to their interests.\n\n2. Promote inclusivity: Work towards creating a more welcoming and inclusive environment for all members, regardless of their background or experience level.\n\n3. Provide educational opportunities: Offer workshops, lectures, or seminars to help members learn new skills and grow in their personal and professional development.\n\n4. Expand outreach: Increase the club\u2019s visibility and reach within the community by partnering with local organizations or businesses, hosting public events, or using social media to raise awareness.\n\n5. Improve communication: Enhance communication among members through regular newsletters, an online forum, or group chat, to keep everyone up to date on club happenings and foster greater collaboration."
+    },
+    {
+        "instruction": "Edit the following sentence to correct the grammar and syntax errors",
+        "input": "You was late to the party",
+        "output": "You were late to the party."
+    },
+    {
+        "instruction": "Create a questions that can be answered using the following sentence.",
+        "input": "\"It was a beautiful day\"",
+        "output": "1. What was the weather like on that day?\n2. How would you describe the day?\n3. Was the day pleasant or gloomy?\n4. Was the day cooperative and conducive for outdoor activities?\n5. What statement best describes the day?"
+    },
+    {
+        "instruction": "Write a simple definition of the word \"economics\".",
+        "input": "",
+        "output": "Economics is a social science that studies how individuals, businesses, governments, and other organizations make choices about using limited resources to satisfy their unlimited wants, and the consequences that arise from these choices. It aims to describe, analyze and explain the production, distribution, and consumption of goods and services."
+    },
+    {
+        "instruction": "Find the cutoff score for successful completion of the exam",
+        "input": "The exam had 100 multiple-choice questions with 4 options each",
+        "output": "I'm sorry, I do not have enough information to determine the cutoff score for successful completion of the exam. The cutoff score would depend on factors such as the difficulty of the questions, grading criteria, and the passing rate set by the examiners or institution. Could you provide me with more information or specifications to be able to determine what the cutoff score is."
+    },
+    {
+        "instruction": "Generate a topic sentence to introduce the following text.",
+        "input": "Amidst increasing violence in the region, many civilians are fleeing their homes in search of safety.",
+        "output": "The escalating conflict is driving mass displacement among the local population."
+    },
+    {
+        "instruction": "Write a function to calculate the factorial of a given number.",
+        "input": "",
+        "output": "Sure! Here's one way to write a function to calculate the factorial of a given number in Python:\n\n```python\ndef factorial(n):\n    # Base case\n    if n <= 1:\n        return 1\n    # Recursive case\n    else:\n        return n * factorial(n-1)\n\n# Example: Calculate the factorial of 5\nnum = 5\nprint(f\"The factorial of {num} is {factorial(num)}\")\n```\n\nThis function uses recursion, which means that it calls itself until the base case (n <= 1) is reached. When the base case is reached, the function returns 1. Otherwise, the function will continue to call itself, multiplying n by the factorial of (n-1) at each call, until the base case is reached."
+    },
+    {
+        "instruction": "Write a function to convert a given string to uppercase unless it starts with the string \"Rejected\"",
+        "input": "",
+        "output": "Here's a Python implementation of the function:\n\n```\ndef uppercase_unless_rejected(string):\n    if string.startswith(\"Rejected\"):\n        return string\n    else:\n        return string.upper()\n```\n\nThis function first checks if the string starts with the substring \"Rejected\". If it does, it simply returns the original string, without any uppercase transformation. If, on the other hand, the string does not start with \"Rejected\", the function returns a new string which is the uppercase version of the original string."
+    },
+    {
+        "instruction": "Extract the positive integers from an array?",
+        "input": "arr = [5,-2,8,-7,3,-1,0,5]",
+        "output": "To extract the positive integers from the given array, you can use the filter() function which will return the values that evaluate to True based on the condition provided in the lambda function. \n\nHere's the Python code snippet:\n\n```\narr = [5,-2,8,-7,3,-1,0,5]\n\nresult = list(filter(lambda x: x > 0, arr))\n\nprint(result)\n```\n\nOutput: [5, 8, 3, 5]\n\nThe filter function iterates through each element in the array and checks if the element is greater than 0, which means it's a positive integer. If it's true, the element is included in the result list. Next, we display the result list which contains only the positive integers."
+    },
+    {
+        "instruction": "Write a javascript function which calculates the square root of a number without any libraries.",
+        "input": "",
+        "output": "Sure, here's an example:\n\n```\nfunction calculateSquareRoot(num) {\n  if (num < 0) return NaN;\n  if (num === 0) return 0;\n  let x = num;\n  while (true) {\n    const new_x = (x + num / x) / 2;\n    if (Math.abs(new_x - x) < 0.000001) return new_x;\n    x = new_x;\n  }\n}\n```\n\nThis function uses the Babylonian method for computing square roots, which is an iterative method that repeatedly improves the estimate of the square root using the formula: `x_(n+1) = (x_n + num / x_n) / 2`. The loop continues until the difference between the current estimate and the previous estimate is less than some small epsilon (in this case, `0.000001`)."
+    },
+    {
+        "instruction": "Reverse a linked list using haskel.",
+        "input": "",
+        "output": "Sure, here's one way to reverse a linked list in Haskell, using pattern matching and recursion:\n\n```\ndata LinkedList a = Nil | Cons a (LinkedList a)\n\nreverseLinkedList :: LinkedList a -> LinkedList a\nreverseLinkedList list = reverseLinkedListHelper list Nil\n  where\n    reverseLinkedListHelper Nil acc = acc\n    reverseLinkedListHelper (Cons x xs) acc = reverseLinkedListHelper xs (Cons x acc)\n```\n\nThe `LinkedList` type definition represents a singly linked list with a head element of type `a` and a tail of another linked list. \n\nThe `reverseLinkedListHelper` function is a helper function that uses tail recursion to reverse the list by iterating over each element in the original list and adding it to the front of the accumulating list `acc`, until the original list is empty (represented by `Nil` in the pattern matching). \n\nThe `reverseLinkedList` function is the top-level function that initializes the accumulating list `acc` as empty, then calls the `reverseLinkedListHelper` function with the original list and empty `acc`. This returns the reversed linked list."
+    },
+    {
+        "instruction": "Compute the longest increasing subsequence of a given array?",
+        "input": "arr = [7, 10, 8, 11, 9, 5]",
+        "output": "The longest increasing subsequence of the given array is [7, 8, 9, 11]. It has a length of 4.\n\nTo compute this, you can use dynamic programming to find the length of the longest increasing subsequence ending at each position, then take the maximum value. Here is an example of how to calculate it in Python:\n\n```python\narr = [7, 10, 8, 11, 9, 5]\nn = len(arr)\nlis = [1]*n\n \nfor i in range(1, n):\n    for j in range(i):\n        if arr[i] > arr[j] and lis[i]< lis[j] + 1:\n            lis[i] = lis[j]+1\n \nprint(max(lis))\n```"
+    },
+    {
+        "instruction": "Design an algorithm to find the maximum profit of a stock buy and sell when given it's historical prices.",
+        "input": "",
+        "output": "Here's a simple algorithm to find the maximum profit of a stock buy and sell:\n\n1. Initialize variables: \n   - min_price = historical_prices[0] (set the minimum value to the first price)\n   - max_profit = 0 (set the maximum profit to zero)\n\n2. Loop through each price in the historical prices:\n   - If the current price is less than the minimum price, update the minimum price with the current price.\n   - Otherwise, calculate the current profit by subtracting the minimum price from the current price.\n   - If the current profit is greater than the maximum profit, update the maximum profit with the current profit.\n\n3. Return the maximum profit.\n\nHere's the code implementation in Python:\n\n```\ndef max_stock_profit(historical_prices):\n    min_price = historical_prices[0]\n    max_profit = 0\n    \n    for price in historical_prices:\n        if price < min_price:\n            min_price = price\n        else:\n            profit = price - min_price\n            if profit > max_profit:\n                max_profit = profit\n                \n    return max_profit\n```\n\nSimply call the function `max_stock_profit` with a list of historical prices as argument to obtain the maximum profit that can be earned by buying and selling the stock."
+    },
+    {
+        "instruction": "Given two strings, check whether one string is a rotation of another?",
+        "input": "s1 = \u2018waterbottle\u2019\ns2 = \u2018erbottlewat\u2019",
+        "output": "Yes, s2 is a rotation of s1.\n\nOne way to check this is to concatenate s1 with itself and see if s2 is a substring of the concatenated string. This works because if a string is rotated, its characters will still be in the same order, just in a different position in the string. If we concatenate s1 with itself, we can see that all the possible rotations will be present in the new string.\n\nIn this case, if we concatenate s1 with itself, we get \"waterbottlewaterbottle\". \"erbottlewat\" is indeed a substring of \"waterbottlewaterbottle\", so s2 is a rotation of s1."
+    },
+    {
+        "instruction": "Given an array of integers, return the first repeating element.",
+        "input": "arr = [3, 6, 7, 1, 4, 6, 7]",
+        "output": "The first repeating element in the array is 6."
+    },
+    {
+        "instruction": "Find the two non-repeating elements in an array of repeating elements?",
+        "input": "arr = [2, 3, 7, 9, 11, 2, 3, 11]",
+        "output": "You can use hash maps to find the two non-repeating elements in an array of repeating elements. Here's an example code written in Python to achieve that:\n\narr = [2, 3, 7, 9, 11, 2, 3, 11]\n\n# creating an empty hash table\nhashTable = {}\n\n# iterating through the array\nfor i in arr:\n    # checking if the element is present in the hash table or not\n    if i in hashTable:\n        # if present increment its value by 1\n        hashTable[i] = hashTable[i] + 1\n    else:\n        # if not present, then add the element in the hash table with the value of 1\n        hashTable[i] = 1\n\n# creating an empty list that will store the result\nresult = []\n\n# iterating through the hash table\nfor i in hashTable:\n    # checking if the value of the element is 1 or not\n    if hashTable[i] == 1:\n        # if yes, then add it to the result\n        result.append(i)\n\nprint(f'The two non-repeating elements are: {result}')\n\n###Output: \n#The two non-repeating elements are: [7, 9]"
+    },
+    {
+        "instruction": "Given a binary tree, check if it is a binary search tree. Write a Java function to do it. Assume the Node class is implemented.",
+        "input": "",
+        "output": "To check if a binary tree is a binary search tree (BST), we need to ensure that all the nodes in the left subtree of a node are less than or equal to the current node's value while all the nodes in the right subtree of a node are greater than the current node's value. Below is a Java function that checks if a binary tree is a BST.\n\n```\npublic boolean isBST(Node root) {\n    return isBST(root, Integer.MIN_VALUE, Integer.MAX_VALUE);\n}\n\nprivate boolean isBST(Node node, int min, int max) {\n    if (node == null) {\n        return true;\n    }\n    if (node.data < min || node.data > max) {\n        return false;\n    }\n    return isBST(node.left, min, node.data - 1) && isBST(node.right, node.data + 1, max);\n}\n```\n\nThe `isBST` function takes in the root node of the binary tree and calls the private `isBST` function with the minimum and maximum possible integer values as the initial parameters. The `isBST` function checks if the node is null, in which case it returns true. Otherwise, it checks if the node's value is within the given range of min and max. If not, it returns false because the node violates the BST property. If the value is within the given range, it recursively checks the left and right subtrees with updated min and max values. If both subtrees return true, the function returns true."
+    },
+    {
+        "instruction": "You are a smart assistant designed to help high school teachers come up with reading comprehension questions.\nGiven a piece of text, you must come up with a question and answer pair that can be used to test a student's reading comprehension abilities.\nWhen coming up with this question/answer pair, you must respond in the following format:\n```\n{{\n    \"question\": \"$YOUR_QUESTION_HERE\",\n    \"answer\": \"$THE_ANSWER_HERE\"\n}}\n```\nEverything between the ``` must be valid json.\nPlease come up with a question/answer pair, in the specified JSON format, for the following text:\n----------------\nThe scream of sirens and the clank of steel on cobblestones echoed down the mean, dark streets. Frightened East Berliners peeked from behind their curtains to see military convoys stretching for blocks. First came the motorcycle outriders, then jeeps, trucks and buses crammed with grim, steel-helmeted East German troops. Rattling in their wake were the tanks \u2014 squat Russian-built T-34s and T-54s. At each major intersection, a platoon peeled off and ground to a halt, guns at the ready. The rest headed on for the sector border, the 25-mile frontier that cuts through the heart of Berlin like a jagged piece of glass. As the troops arrived at scores of border points, cargo trucks were already unloading rolls of barbed wire, concrete posts, wooden horses, stone blocks, picks and shovels. When dawn came four hours later, a wall divided East Berlin from West for the first time in eight years.",
+        "input": "",
+        "output": "{\n    \"question\": \"What did the troops use to block off the border between East Berlin and West Berlin?\",\n    \"answer\": \"Cargo trucks were used to unload rolls of barbed wire, concrete posts, wooden horses, stone blocks, picks and shovels to block off the border between East Berlin and West Berlin.\"\n}"
+    },
+    {
+        "instruction": "Calculate the amount of money in a bank account with an initial $100 deposit and an interest rate of 6%, compounded annually",
+        "input": "",
+        "output": "Certainly! To calculate the amount of money in a bank account with an initial $100 deposit and an interest rate of 6% compounded annually, we can use the formula for compound interest, which is A = P(1 + r/n)^(nt). In this case, A is the future value of the account, P is the initial deposit, r is the annual interest rate, n is the number of times the interest is compounded per year, and t is the number of years.\n\nSince you didn\u2019t specify the number of years, let's assume you mean 1 year. If the interest is compounded annually, then n = 1.\n\nSubstituting the given values into the formula, we get:\n\nA = 100(1 + 0.06/1)^(1*1)\nA = 100(1 + 0.06)^1\nA = 100(1.06)^1\nA = 106\n\nSo, after 1 year, the bank account would have a balance of $106."
+    },
+    {
+        "instruction": "Give me a detailed overview of the framework of a web service.",
+        "input": "",
+        "output": "A web service is a software system that is designed to support the interoperable interaction between machines over a network. It allows computers to communicate and exchange data with each other via a common set of rules and protocols, known as the web services framework. The framework is essentially a combination of standards and technologies that make it possible for computers to communicate and work together.\n\nAt the core of the web services framework are four key technologies: XML (Extensible Markup Language), SOAP (Simple Object Access Protocol), WSDL (Web Services Description Language), and UDDI (Universal Description, Discovery, and Integration).\n\nXML is a markup language that is used to encode data in a format that can be exchanged between machines. It is a flexible and widely adopted technology, which makes it a popular choice for web services. It provides the common syntax for defining and exchanging data between web services.\n\nSOAP is a messaging protocol that is used to transmit data and invoke web service methods. It provides the means for exchanging information between web services, and is responsible for defining the format and structure of messages. SOAP messages are typically sent over HTTP, but can be sent over other transport protocols as well.\n\nWSDL is an XML-based language that is used to describe the functionality of a web service. It provides machine-readable documentation of the service, and specifies the methods and data types that the service can provide. WSDL makes it possible for clients to discover the capabilities of the service and to generate code to interact with it.\n\nUDDI is a platform-independent, XML-based registry for businesses to list and discover web services. It provides a directory of services, which allows clients to find the services they need and to obtain the necessary information to interact with them.\n\nIn summary, the web services framework is a combination of technologies that enables machines to communicate and exchange data with each other in a standardized way. The framework is based on open standards and is widely adopted, which makes it easy for organizations to integrate and use web services in their operations."
+    },
+    {
+        "instruction": "Create a timeline describing the history of the internet",
+        "input": "",
+        "output": "1960s - The concept of wide-area computer networking emerged among computer scientists in the United States.\n\n1969 - ARPANET, the first operational data network, was launched by the Advanced Research Projects Agency (ARPA).\n\n1971 - Ray Tomlinson invented email, allowing messages to be sent from one computer to another.\n\n1972 - Vint Cerf and Robert Kahn designed the Transmission Control Protocol (TCP) and Internet Protocol (IP), the fundamental communication protocols at the heart of the Internet.\n\n1974 - A proposal for the creation of the Internet was published, establishing the concept of packet switching as the fundamental technology for data transmission.\n\n1983 - ARPANET split into two separate networks, MILNET and the new ARPANET, to accommodate the increasing number of military and civilian applications.\n\n1989 - Tim Berners-Lee proposed the World Wide Web, a system designed to make it easier for scientists to share information across the Internet.\n\n1990 - ARPANET was decommissioned and the World Wide Web was launched.\n\n1991 - The first website, info.cern.ch, went online.\n\n1993 - The release of the Mosaic web browser made the web accessible to a much wider audience.\n\n1994 - E-commerce was born with the founding of Amazon and eBay.\n\n1995 - The dot-com boom began, and internet startups received massive investments.\n\n2000 - The dot-com bubble burst, but the era of high-speed broadband internet access began.\n\n2004 - The rise of social networking began with the launch of Facebook.\n\n2005 - YouTube was launched, ushering in the era of online video sharing.\n\n2007 - The launch of the iPhone marked a watershed moment in mobile internet access.\n\n2010 - The concept of cloud computing became mainstream with the rise of services like Google Drive and Dropbox.\n\nToday, the internet continues to evolve and expand, becoming an ever-more integral part of our lives, communication, and business."
+    },
+    {
+        "instruction": "Paraphrase the following sentence",
+        "input": "The scientists conducted a rigorous experiment",
+        "output": "A thorough investigation was executed by the researchers."
+    },
+    {
+        "instruction": "Use the following pieces of context to answer the question at the end. If you don't know the answer, just say that you don't know, don't try to make up an answer.\n\nA state actor's involvement in the blast of the Nord Stream pipelines last year is the \"absolute main scenario\", though confirming identity will prove difficult, the Swedish prosecutor investigating the attack said on Thursday.\n\nIn September 2022, several unexplained underwater explosions ruptured the Nord Stream 1 and newly-built Nord Stream 2 pipelines that link Russia and Germany across the Baltic Sea. The blasts occurred in the economic zones of Sweden and Denmark and both countries say the explosions were deliberate, but have yet to determine who was responsible.\n\nThe blast in the Swedish zone occurred at a depth of 80 meters, which the Swedish prosecutor said made it complicated to investigate.\n\n\"We believe it will be rather difficult to determine who did this,\" prosecutor Mats Ljungqvist told Reuters in a phone interview.\n\n\"The people who did this have probably been aware that they would leave clues behind and probably took care so that the evidence would not point in one direction, but in several directions,\" he added.\n\n\"That makes it difficult to clearly point to one actor.\"\n\nThe investigation continues.\n\nQuestion: Who was responsible for the Nordstream pipeline explosion?",
+        "input": "",
+        "output": "It is currently unknown who was responsible for the Nord Stream pipeline explosion. Both Sweden and Denmark say the explosions were deliberate, but have yet to determine who was responsible. The Swedish prosecutor investigating the attack believes that a state actor's involvement is the \"absolute main scenario\", but confirming identity will prove difficult."
+    },
+    {
+        "instruction": "Describe the pros and cons of the following policy",
+        "input": "Providing free college education",
+        "output": "Like any policy, providing free college education has its own set of advantages and disadvantages.\n\nPros:\n- Equal Opportunities: Providing free college education can help level the playing field by giving students from low income and underprivileged backgrounds an equal chance to pursue higher education, without having to worry about financial hurdles.\n- Economic Growth: An educated workforce is crucial for the growth and development of an economy. By making college education free, more people would be able to acquire the skills and knowledge needed to contribute to the economy.\n- Reduced Debt: College education can be very expensive and can result in students accumulating large amounts of debt. Free college education would eliminate this issue, allowing students to start their careers without the burden of college debt.\n- Increased Enrollment: The cost of college education can be a deterrent for some students. By removing this barrier, more students may be encouraged to enroll in college and pursue higher education.\n\n\nCons:\n- Financial Burden: Providing free college education comes with a cost. This would mean that the government would have to allocate a significant amount of funds towards education, possibly resulting in cuts to other important programs or an increase in taxes.\n- Overcrowding: With the increase in enrollment that free college education could bring, existing colleges and universities may become overcrowded, leading to larger class sizes and reduced resources for students.\n- Reduced Quality: Due to the financial burden of providing free education, the quality of education may suffer in the long run, especially if there are not enough funds allocated to maintain facilities, attract and retain quality faculty and keep up with the latest developments in various fields of study.\n- Decreased Value: There is also a risk that with the increase in the number of college graduates, the value of a college degree may go down, as the job market may become oversaturated with graduates competing for the same jobs."
+    },
+    {
+        "instruction": "Design a post for a social media account to promote the following product",
+        "input": "Fresh fruit smoothie",
+        "output": "\ud83c\udf53\ud83c\udf4c\ud83c\udf4aSay hello to our freshly blended Fruit Smoothie!\ud83c\udf4a\ud83c\udf4c\ud83c\udf53 \n\nQuench your thirst and nourish your body with our delicious blend of juicy, ripe fruits. Each cup is packed with essential vitamins, minerals, and fiber to keep you feeling your best. \n\nPerfect for breakfast on-the-go, a mid-day energy boost, or a post-workout treat. Refreshing and satisfying, our fruit smoothie is the healthier option you\u2019ve been looking for. Don't miss out, try one today! #freshfruit #smoothie #healthy #delicious #refreshing"
+    },
+    {
+        "instruction": "Hans went to a pet shop. He bought 15 gold fish and 7 blue fish. How many fish did he buy? Think step-by-step.",
+        "input": "",
+        "output": "We add 15 to 7 and get 22. Thus, Hans bought 22 fish at the pet shop."
+    },
+    {
+        "instruction": "Create a job description for the following role",
+        "input": "Data Analytics Consultant",
+        "output": "Job Title: Data Analytics Consultant\n\nJob Summary:\nWe are currently seeking a dynamic and experienced Data Analytics Consultant to join our growing team. This position will play a key role in providing data-driven insights to our clients by leveraging advanced analytical techniques and business intelligence tools. The successful candidate will have a strong analytical background and be able to communicate complex data analysis in a clear and concise manner to non-technical audiences.\n\nKey Responsibilities:\n- Gather, analyze, and interpret large and complex data sets to provide actionable insights and recommendations to clients\n- Develop predictive models, simulations, and data-driven decision-making tools\n- Create data visualizations and dashboards to effectively communicate analytical findings\n- Work closely with clients to understand their business needs and tailor data analysis to meet their objectives\n- Collaborate with internal teams to develop and improve analytical methodologies and processes\n- Stay up-to-date with industry trends and advancements in data analytics and business intelligence tools\n\nQualifications:\n- Bachelor's degree in a quantitative field such as mathematics, statistics, computer science, or engineering\n- Minimum of 3-5 years of experience in a data analytics or business intelligence role\n- Strong problem-solving skills and ability to think critically and strategically\n- Proficiency in data analysis tools such as R, Python, SQL, and Tableau\n- Excellent communication and presentation skills\n- Ability to work independently and within a team environment\n- Strong project management and organizational skills\n\nAs a Data Analytics Consultant at our company, you will have the opportunity to work on challenging and exciting projects with a team of dedicated professionals. We offer a competitive compensation package and opportunities for career growth and advancement. If you have a passion for data and analytics, and are looking for a new challenge, we would love to hear from you."
+    },
+    {
+        "instruction": "Identify the correct order for the following commands",
+        "input": "pack, prepare, travel",
+        "output": "The correct order for the commands would be: \n1. Prepare\n2. Pack\n3. Travel"
+    },
+    {
+        "instruction": "Create a survey question to measure customer satisfaction",
+        "input": "",
+        "output": "On a scale of 1-10, how satisfied were you with the products or services you received from our company?"
+    },
+    {
+        "instruction": "Create a list of 10 different animals",
+        "input": "",
+        "output": "1. Lion\n2. Elephant\n3. Panda\n4. Giraffe\n5. Dolphin\n6. Kangaroo\n7. Tiger\n8. Gorilla\n9. Camel\n10. Zebra"
+    },
+    {
+        "instruction": "Suggest a good idea for a family photoshoot.",
+        "input": "",
+        "output": "A great idea for a family photoshoot could be a themed shoot that shows off each family member's personality and interests. For instance, if the family loves outdoor activities, consider having the photoshoot at a park, forest, or beach with everyone dressed in their favorite outdoor gear. If the family is into music or art, consider incorporating their instruments or art supplies into the photos. Another idea is to do a generational shoot with grandparents and other extended family members, capturing the love and bond between generations. You could also have fun with costumes and props, such as having a vintage or retro theme or dress up as characters from a favorite movie or book. The key is to have fun and let the family's unique dynamics and interests shine through in the photos."
+    },
+    {
+        "instruction": "Create a response for a customer's email about a refund issue.",
+        "input": "Dear [Company],\n\nI recently purchased a product from your store and I'm disappointed with the quality. I would like to request a refund.",
+        "output": "Dear Customer,\n\nThank you for bringing this to our attention. I am sorry to hear that you were not satisfied with the product you purchased. We strive to provide high-quality items that meet the expectations of our customers, and we regret that this was not the case for you.\n\nI would be happy to assist you in processing a refund for your purchase. Could you please provide me with the following details so that I can locate your order and initiate the refund process:\n\n- Your order number\n- The name and/or email address associated with the purchase\n- The date of purchase\n\nOnce I have this information, I will promptly process your refund.\n\nAgain, I apologize for any inconvenience this has caused you and thank you for your patience and understanding as we resolve this issue.\n\nBest regards,\n\n[Company] Customer Support"
+    },
+    {
+        "instruction": "Imagine you are a popular coffee brand looking to promote your new line of environmentally friendly coffee beans. Write a short advertising slogan that emphasizes this aspect of the product.",
+        "input": "",
+        "output": "Savor the rich taste of our earth-loving beans \u2013 coffee that's good for you and the planet!"
+    },
+    {
+        "instruction": "Provide five adjectives that describe a particular animal.",
+        "input": "Lion",
+        "output": "Majestic, powerful, fierce, regal, dominant."
+    },
+    {
+        "instruction": "Rearrange the words to create a complete sentence.",
+        "input": "Underwater creatures are fascinating",
+        "output": "Creatures underwater are fascinating."
+    },
+    {
+        "instruction": "Write a story that begins with the following sentence.",
+        "input": "She opened the door to find a tall figure cloaked in shadows.",
+        "output": "She opened the door to find a tall figure cloaked in shadows. For a moment, she thought it was just her imagination playing tricks on her, for she had been alone in the house for days and was starting to feel the weight of isolation. But as her eyes adjusted to the darkness, she saw that it was no trick of the mind; there was indeed someone\u2014or something\u2014standing before her.\n\nTrembling with fear, she backed away, unsure of what to say or do. The figure stood motionless, its face obscured by the darkness. She was about to scream for help when the figure finally spoke.\n\n\u201cDon\u2019t be afraid,\u201d it said in a deep, velvety voice.\n\nShe stopped in her tracks, curiosity getting the best of her fear. The figure stepped forward and, to her relief and astonishment, she saw that it was an old friend whom she hadn\u2019t seen in years.\n\nOverjoyed to see him, she threw her arms around him and cried tears of happiness. They spent the rest of the night talking and reminiscing about old times. It was just what she needed to dispel the loneliness that had been creeping up on her.\n\nAs the first light of dawn began to filter through the windows, her friend got up to leave. She walked him to the door, feeling a sense of sadness at his departure. But as he stepped into the sunlight, he turned around and smiled.\n\n\u201cI\u2019ll be back, don\u2019t worry,\u201d he said.\n\nAnd with that, he disappeared into the morning, leaving her with a renewed sense of hope and the knowledge that sometimes, even in the darkest moments, help can come from the most unexpected places."
+    }
+]
