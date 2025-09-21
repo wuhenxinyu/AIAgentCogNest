@@ -5,7 +5,7 @@ import os
 
 # 设置tushare token
 # 注意：使用前需要先注册tushare账号并获取token
-ts.set_token('91ff05c57927e99826a17d718b1f95180c82b36cf2435d50bfbbc942')  # 请替换为你的token
+ts.set_token('your_api_key_here')  # 请替换为你的token
 pro = ts.pro_api()
 
 # 定义股票代码列表
