@@ -1,0 +1,5 @@
+tushare==1.4.24
+pandas==2.1.1
+openpyxl==3.1.5
+statsmodels==0.14.5
+Prophet==1.1.7
