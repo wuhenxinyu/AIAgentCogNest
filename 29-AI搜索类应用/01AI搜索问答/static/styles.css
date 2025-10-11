@@ -1,0 +1,43 @@
+body { font-family: 'Arial', sans-serif; background-color: #F7F8FA; }
+.gradio-container { max-width: 100% !important; background-color: #F7F8FA;}
+#sidebar { background-color: #FFFFFF; padding: 20px; border-right: 1px solid #E5E7EB; min-height: 100vh; }
+#logo { display: flex; align-items: center; margin-bottom: 30px; }
+#logo-img { width: 40px; height: 40px; margin-right: 10px; border-radius: 50%; }
+#logo-text { font-size: 24px; font-weight: bold; color: #333; }
+.sidebar-btn { 
+    display: block; width: 100%; text-align: left; padding: 12px 15px; 
+    border: none; background: none; font-size: 16px; margin-bottom: 10px;
+    cursor: pointer; border-radius: 8px; color: #374151;
+}
+.sidebar-btn.active, .sidebar-btn:hover { background-color: #F3F4F6; }
+#main-chat { padding: 15px; background-color: #F7F8FA; }
+#chat-header { text-align: center; margin-top: 0%; margin-bottom: 1px; }
+#chat-header-title { font-size: 48px; font-weight: 500; color: #333; letter-spacing: 2px; background: -webkit-linear-gradient(45deg, #3b82f6, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+#chat-header-subtitle { font-size: 16px; color: #6B7280; margin-top: 10px;}
+#chatbot { box-shadow: none; border: none; background-color: transparent; }
+
+.message-bubble-user { background: #DBEAFE !important; color: #1E40AF !important; }
+.message-bubble-bot { background: #FFFFFF !important; color: #374151 !important; }
+.suggestion-row { margin-top: 20px; display: flex; justify-content: center; flex-wrap: wrap; gap: 10px;}
+.suggestion-btn { 
+    background-color: #FFFFFF; border: 1px solid #E5E7EB; padding: 8px 16px;
+    border-radius: 18px; cursor: pointer; color: #374151; font-size: 14px;
+    transition: all 0.2s ease-in-out;
+}
+.suggestion-btn:hover { background-color: #F9FAFB; border-color: #D1D5DB; transform: translateY(-2px); box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+#input-container { border: 1px solid #D1D5DB; border-radius: 24px; background-color: #fff; padding: 5px 5px 5px 20px; display:flex; align-items:center;} 
+
+.custom-textbox textarea {background-color: #f3f4f6 !important;color: #000000 !important;}
+
+
+@media (prefers-color-scheme: dark) {
+    .bubble-wrap.svelte-gjtrl6.svelte-gjtrl6 {
+        background: #e3e3e3 !important; /* 浅灰色 */
+    }
+    
+    /* 助手消息气泡 */
+    .message-row.bubble.bot-row.svelte-yaaj3 {
+        --background-fill-secondary: #72767e !important; /* 深灰色 */
+        --border-color-primary: #72767e !important;
+    }
+}
