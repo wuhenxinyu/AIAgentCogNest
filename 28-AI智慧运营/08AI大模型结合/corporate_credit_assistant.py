@@ -18,7 +18,7 @@ plt.rcParams['font.sans-serif'] = ['SimHei', 'Microsoft YaHei', 'SimSun', 'Arial
 plt.rcParams['axes.unicode_minus'] = False  # 解决负号显示问题
 
 # 配置 DashScope
-dashscope.api_key = os.getenv('DASHSCOPE_API_KEY', 'sk-58f051ae745e4bb19fdca31735105b11')
+dashscope.api_key = os.getenv('DASHSCOPE_API_KEY', '')
 dashscope.timeout = 30  # 设置超时时间为 30 秒
 
 # ====== 对公授信客户助手 system prompt 和函数描述 ======
