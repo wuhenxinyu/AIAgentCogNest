@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百万客群经营可视化大屏</title>
+    <script src="../static/echarts.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #0f1420;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 32px;
+            color: #4facfe;
+        }
+        .dashboard {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto auto;
+            gap: 20px;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+        .chart-container {
+            background-color: #1a2332;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        .chart-title {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #4facfe;
+        }
+        .chart {
+            width: 100%;
+            height: 400px;
+        }
+        .chart-full-width {
+            grid-column: 1 / -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>百万客群经营可视化大屏</h1>
+    </div>
+    <div class="dashboard">
+        <!-- 左上: 资产等级分布 -->
+        <div class="chart-container">
+            <div class="chart-title">客户资产等级分布</div>
+            <div id="assetDistributionChart" class="chart"></div>
+        </div>
+
+        <!-- 右上: 生命周期与产品持有热力图 -->
+        <div class="chart-container">
+            <div class="chart-title">客户生命周期与产品持有热力图</div>
+            <div id="lifecycleProductHeatmapChart" class="chart"></div>
+        </div>
+
+        <!-- 上中: 高潜力客户画像 -->
+        <div class="chart-container chart-full-width">
+            <div class="chart-title">高潜力客户画像综合分析</div>
+            <div id="highPotentialCustomersChart" class="chart"></div>
+        </div>
+
+        <!-- 左下: 营销效果监控 -->
+        <div class="chart-container">
+            <div class="chart-title">营销触达效果监控</div>
+            <div id="marketingPerformanceChart" class="chart"></div>
+        </div>
+
+        <!-- 右下: 地域分布 -->
+        <div class="chart-container">
+            <div class="chart-title">客户地域分布与经营情况</div>
+            <div id="geographicDistributionChart" class="chart"></div>
+        </div>
+    </div>
+
+    <script>
+        // 初始化所有图表
+        const assetDistributionChart = echarts.init(document.getElementById('assetDistributionChart'));
+        const lifecycleProductHeatmapChart = echarts.init(document.getElementById('lifecycleProductHeatmapChart'));
+        const highPotentialCustomersChart = echarts.init(document.getElementById('highPotentialCustomersChart'));
+        const marketingPerformanceChart = echarts.init(document.getElementById('marketingPerformanceChart'));
+        const geographicDistributionChart = echarts.init(document.getElementById('geographicDistributionChart'));
+
+        // 加载资产等级分布数据
+        fetch('/api/asset_distribution')
+            .then(response => response.json())
+            .then(data => {
+                const option = {
+                    title: {
+                        text: '资产等级分布',
+                        left: 'center',
+                        textStyle: { color: '#fff' }
+                    },
+                    tooltip: {
+                        trigger: 'item',
+                        formatter: '{a} <br/>{b}: {c} ({d}%)'
+                    },
+                    legend: {
+                        orient: 'vertical',
+                        left: 'left',
+                        textStyle: { color: '#fff' }
+                    },
+                    series: [{
+                        name: '客户数量',
+                        type: 'pie',
+                        radius: ['40%', '70%'], // 环形图
+                        avoidLabelOverlap: false,
+                        itemStyle: {
+                            borderRadius: 10,
+                            borderColor: '#fff',
+                            borderWidth: 2
+                        },
+                        label: {
+                            show: true,
+                            formatter: '{b}: {c}'
+                        },
+                        emphasis: {
+                            label: {
+                                show: true,
+                                fontSize: '18',
+                                fontWeight: 'bold'
+                            }
+                        },
+                        data: data
+                    }]
+                };
+                assetDistributionChart.setOption(option);
+            });
+
+        // 加载生命周期与产品持有热力图数据
+        fetch('/api/lifecycle_product_heatmap')
+            .then(response => response.json())
+            .then(data => {
+                const option = {
+                    title: {
+                        text: '生命周期与产品持有热力图',
+                        left: 'center',
+                        textStyle: { color: '#fff' }
+                    },
+                    tooltip: {
+                        position: 'top'
+                    },
+                    animation: false,
+                    grid: {
+                        height: '50%',
+                        y: '10%'
+                    },
+                    xAxis: {
+                        type: 'category',
+                        data: data.xAxis,
+                        splitArea: { show: true },
+                        axisLabel: { color: '#fff' }
+                    },
+                    yAxis: {
+                        type: 'category',
+                        data: data.yAxis,
+                        splitArea: { show: true },
+                        axisLabel: { color: '#fff' }
+                    },
+                    visualMap: {
+                        min: 0,
+                        max: Math.max(...data.data.map(item => item[2])),
+                        calculable: true,
+                        orient: 'horizontal',
+                        left: 'center',
+                        bottom: '15%',
+                        textStyle: { color: '#fff' }
+                    },
+                    series: [{
+                        name: '客户数量',
+                        type: 'heatmap',
+                        data: data.data,
+                        label: {
+                            show: true,
+                            color: '#000'
+                        },
+                        emphasis: {
+                            itemStyle: {
+                                shadowBlur: 10,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                        }
+                    }]
+                };
+                lifecycleProductHeatmapChart.setOption(option);
+            });
+
+        // 加载高潜力客户画像数据
+        fetch('/api/high_potential_customers')
+            .then(response => response.json())
+            .then(data => {
+                const option = {
+                    title: {
+                        text: '高潜力客户画像',
+                        left: 'center',
+                        textStyle: { color: '#fff' }
+                    },
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: { type: 'cross' }
+                    },
+                    legend: {
+                        data: ['高潜力客户数量', '平均资产(万元)'],
+                        textStyle: { color: '#fff' },
+                        top: '10%'
+                    },
+                    xAxis: {
+                        type: 'category',
+                        data: data.ages,
+                        axisLabel: { color: '#fff' }
+                    },
+                    yAxis: [
+                        {
+                            type: 'value',
+                            name: '客户数量',
+                            position: 'left',
+                            alignTicks: true,
+                            axisLine: { show: true, lineStyle: { color: '#4facfe' } },
+                            axisLabel: { color: '#fff' }
+                        },
+                        {
+                            type: 'value',
+                            name: '平均资产',
+                            position: 'right',
+                            alignTicks: true,
+                            axisLine: { show: true, lineStyle: { color: '#ff6b6b' } },
+                            axisLabel: { color: '#fff' }
+                        }
+                    ],
+                    series: [
+                        {
+                            name: '高潜力客户数量',
+                            type: 'bar',
+                            yAxisIndex: 0,
+                            itemStyle: { color: '#4facfe' },
+                            data: data.customer_counts
+                        },
+                        {
+                            name: '平均资产(万元)',
+                            type: 'line',
+                            yAxisIndex: 1,
+                            itemStyle: { color: '#ff6b6b' },
+                            data: data.avg_assets.map(val => Math.round(val) / 10000) // 转换为万元
+                        }
+                    ]
+                };
+                highPotentialCustomersChart.setOption(option);
+            });
+
+        // 加载营销效果数据
+        fetch('/api/marketing_performance')
+            .then(response => response.json())
+            .then(data => {
+                const option = {
+                    title: {
+                        text: `营销成功率: ${(data.success_rate * 100).toFixed(2)}%`,
+                        left: 'center',
+                        textStyle: { color: '#fff' }
+                    },
+                    tooltip: {
+                        trigger: 'item',
+                        formatter: '{a} <br/>{b}: {c} ({d}%)'
+                    },
+                    series: [
+                        {
+                            name: '触达结果',
+                            type: 'pie',
+                            radius: '60%',
+                            center: ['50%', '60%'],
+                            data: data.results.map((result, index) => ({
+                                value: data.counts[index],
+                                name: result
+                            })),
+                            emphasis: {
+                                itemStyle: {
+                                    shadowBlur: 10,
+                                    shadowOffsetX: 0,
+                                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                }
+                            },
+                            label: {
+                                color: '#fff'
+                            }
+                        }
+                    ]
+                };
+                marketingPerformanceChart.setOption(option);
+            });
+
+        // 加载地域分布数据
+        fetch('/api/geographic_distribution')
+            .then(response => response.json())
+            .then(data => {
+                const option = {
+                    title: {
+                        text: '地域分布与经营情况',
+                        left: 'center',
+                        textStyle: { color: '#fff' }
+                    },
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: { type: 'cross' }
+                    },
+                    legend: {
+                        data: ['客户数量', '平均资产(万元)'],
+                        textStyle: { color: '#fff' },
+                        top: '10%'
+                    },
+                    xAxis: {
+                        type: 'category',
+                        data: data.city_levels,
+                        axisLabel: { color: '#fff' }
+                    },
+                    yAxis: [
+                        {
+                            type: 'value',
+                            name: '客户数量',
+                            position: 'left',
+                            axisLine: { show: true, lineStyle: { color: '#4facfe' } },
+                            axisLabel: { color: '#fff' }
+                        },
+                        {
+                            type: 'value',
+                            name: '平均资产(万元)',
+                            position: 'right',
+                            axisLine: { show: true, lineStyle: { color: '#ff6b6b' } },
+                            axisLabel: { color: '#fff' }
+                        }
+                    ],
+                    series: [
+                        {
+                            name: '客户数量',
+                            type: 'bar',
+                            yAxisIndex: 0,
+                            itemStyle: { color: '#4facfe' },
+                            data: data.customer_counts
+                        },
+                        {
+                            name: '平均资产(万元)',
+                            type: 'line',
+                            yAxisIndex: 1,
+                            itemStyle: { color: '#ff6b6b' },
+                            data: data.avg_assets.map(val => Math.round(val) / 10000) // 转换为万元
+                        }
+                    ]
+                };
+                geographicDistributionChart.setOption(option);
+            });
+
+        // 响应式处理
+        window.addEventListener('resize', function() {
+            assetDistributionChart.resize();
+            lifecycleProductHeatmapChart.resize();
+            highPotentialCustomersChart.resize();
+            marketingPerformanceChart.resize();
+            geographicDistributionChart.resize();
+        });
+    </script>
+</body>
+</html>

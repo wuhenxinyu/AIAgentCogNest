@@ -1,0 +1,43 @@
+|--- total_assets <= 1910345.12
+|   |--- monthly_income <= 77688.45
+|   |   |--- total_assets <= 1628301.31
+|   |   |   |--- credit_card_monthly_expense <= 47000.66
+|   |   |   |   |--- class: 0
+|   |   |   |--- credit_card_monthly_expense >  47000.66
+|   |   |   |   |--- class: 0
+|   |   |--- total_assets >  1628301.31
+|   |   |   |--- monthly_income <= 62113.21
+|   |   |   |   |--- class: 0
+|   |   |   |--- monthly_income >  62113.21
+|   |   |   |   |--- class: 1
+|   |--- monthly_income >  77688.45
+|   |   |--- total_assets <= 1000423.56
+|   |   |   |--- total_assets <= 770237.28
+|   |   |   |   |--- class: 0
+|   |   |   |--- total_assets >  770237.28
+|   |   |   |   |--- class: 0
+|   |   |--- total_assets >  1000423.56
+|   |   |   |--- total_assets <= 1207835.75
+|   |   |   |   |--- class: 1
+|   |   |   |--- total_assets >  1207835.75
+|   |   |   |   |--- class: 1
+|--- total_assets >  1910345.12
+|   |--- monthly_income <= 48703.72
+|   |   |--- total_assets <= 2452843.12
+|   |   |   |--- activity_score <= 225.00
+|   |   |   |   |--- class: 0
+|   |   |   |--- activity_score >  225.00
+|   |   |   |   |--- class: 1
+|   |   |--- total_assets >  2452843.12
+|   |   |   |--- class: 1
+|   |--- monthly_income >  48703.72
+|   |   |--- monthly_income <= 52716.32
+|   |   |   |--- income_to_asset_ratio <= 0.02
+|   |   |   |   |--- class: 1
+|   |   |   |--- income_to_asset_ratio >  0.02
+|   |   |   |   |--- class: 0
+|   |   |--- monthly_income >  52716.32
+|   |   |   |--- total_assets <= 1990973.00
+|   |   |   |   |--- class: 1
+|   |   |   |--- total_assets >  1990973.00
+|   |   |   |   |--- class: 1
