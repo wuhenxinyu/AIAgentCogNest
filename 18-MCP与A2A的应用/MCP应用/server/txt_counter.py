@@ -67,5 +67,6 @@ def read_txt_file(filename: str) -> str:
         return f"读取文件时发生错误：{str(e)}"
 
 if __name__ == "__main__":
-    # 初始化并运行服务器，默认stdio方式
+    # 初始化并运行服务器，默认stdio方式，远程部署时需指定transport为http或sse
+    # 本地 stdio 模式非常适合开发和调试，但若要让服务被公开访问，则需要将其部署为网络服务。这可以通过 sse 或 streamable-http 协议实现。
     mcp.run(transport="stdio")
