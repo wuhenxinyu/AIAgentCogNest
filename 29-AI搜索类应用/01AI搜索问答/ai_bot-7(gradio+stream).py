@@ -11,7 +11,7 @@ import warnings
 import gradio as gr
 import time
 import base64
-os.environ['DASHSCOPE_API_KEY'] = 'your_api_key_here'
+os.environ['DASHSCOPE_API_KEY'] = 'sk-58f051ae745e4bb19fdca31735105b11'
 warnings.filterwarnings("ignore")
 
 def init_agent_service():
