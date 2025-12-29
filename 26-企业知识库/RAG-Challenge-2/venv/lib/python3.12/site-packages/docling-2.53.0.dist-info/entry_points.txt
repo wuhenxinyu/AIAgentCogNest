@@ -1,0 +1,6 @@
+[console_scripts]
+docling = docling.cli.main:app
+docling-tools = docling.cli.tools:app
+
+[docling]
+docling_defaults = docling.models.plugins.defaults

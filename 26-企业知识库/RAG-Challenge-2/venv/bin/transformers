@@ -1,0 +1,7 @@
+#!/Users/clz/Downloads/xmkf/llm/AIAgentCogNest/26-企业知识库/RAG-Challenge-2/venv/bin/python3.12
+import sys
+from transformers.commands.transformers_cli import main
+if __name__ == '__main__':
+    if sys.argv[0].endswith('.exe'):
+        sys.argv[0] = sys.argv[0][:-4]
+    sys.exit(main())

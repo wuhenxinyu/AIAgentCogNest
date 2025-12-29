@@ -1,0 +1,54 @@
+Metadata-Version: 2.4
+Name: rtree
+Version: 1.4.1
+Summary: R-Tree spatial index for Python GIS
+Author-email: Sean Gillies <sean.gillies@gmail.com>
+Maintainer-email: Howard Butler <howard@hobu.co>, Mike Taves <mwtoews@gmail.com>
+License-Expression: MIT
+Project-URL: Documentation, https://rtree.readthedocs.io
+Project-URL: Repository, https://github.com/Toblerity/rtree
+Keywords: gis,spatial,index,r-tree
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Scientific/Engineering :: GIS
+Classifier: Topic :: Database
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Dynamic: license-file
+
+# Rtree: Spatial indexing for Python
+
+[![Test](https://github.com/Toblerity/rtree/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/Toblerity/rtree/actions/workflows/test.yml)
+[![PyPI version](https://badge.fury.io/py/rtree.svg)](https://badge.fury.io/py/rtree)
+
+
+Rtree is a [ctypes](https://docs.python.org/3/library/ctypes.html) Python wrapper of [libspatialindex](https://libspatialindex.org/) that provides a
+number of advanced spatial indexing features for the spatially curious Python
+user.  These features include:
+
+* Nearest neighbor search
+* Intersection search
+* Multi-dimensional indexes
+* Clustered indexes (store Python pickles directly with index entries)
+* Bulk loading
+* Deletion
+* Disk serialization
+* Custom storage implementation (to implement spatial indexing in ZODB, for example)
+
+
+Wheels are available for most major platforms, and `rtree` with bundled `libspatialindex` can be installed via pip:
+
+```
+pip install rtree
+```
+
+See [changes](https://rtree.readthedocs.io/en/latest/changes.html) for all versions.
