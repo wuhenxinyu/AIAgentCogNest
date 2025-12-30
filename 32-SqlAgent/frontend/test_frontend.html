@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Agent Frontend Test</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 300px 1fr 400px;
+            gap: 20px;
+            height: 90vh;
+        }
+        .panel {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            overflow-y: auto;
+        }
+        .upload-area {
+            border: 2px dashed #ccc;
+            padding: 40px;
+            text-align: center;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .upload-area:hover {
+            border-color: #007bff;
+        }
+        .file-list {
+            margin-top: 20px;
+        }
+        .file-item {
+            padding: 10px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        .file-item:hover {
+            background: #f0f0f0;
+        }
+        .file-item.selected {
+            background: #e3f2fd;
+            border-color: #2196f3;
+        }
+        textarea {
+            width: 100%;
+            min-height: 100px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            resize: vertical;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        .chat-messages {
+            height: 400px;
+            overflow-y: auto;
+            border: 1px solid #e0e0e0;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .message {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .message.user {
+            background: #e3f2fd;
+            text-align: right;
+        }
+        .message.assistant {
+            background: #f0f0f0;
+        }
+        .result-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        .result-table th, .result-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .result-table th {
+            background: #f5f5f5;
+        }
+        .quick-questions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .quick-btn {
+            padding: 5px 10px;
+            background: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        .quick-btn:hover {
+            background: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <h1>SQL Agent 前后端联调测试</h1>
+
+    <div class="container">
+        <!-- 左侧：文件上传 -->
+        <div class="panel">
+            <h2>1. 文件上传</h2>
+            <div class="upload-area" onclick="document.getElementById('fileInput').click()">
+                <p>点击或拖拽CSV/Excel文件到此处</p>
+                <input type="file" id="fileInput" accept=".csv,.xlsx,.xls" style="display: none;">
+            </div>
+            <div class="file-list" id="fileList"></div>
+        </div>
+
+        <!-- 中间：查询界面 -->
+        <div class="panel">
+            <h2>2. 数据查询/对话</h2>
+            <div class="chat-messages" id="chatMessages"></div>
+            <textarea id="queryInput" placeholder="输入您的问题，例如：显示销售额最高的产品"></textarea>
+            <div class="quick-questions">
+                <button class="quick-btn" onclick="setQuery('显示前10条数据')">显示前10条数据</button>
+                <button class="quick-btn" onclick="setQuery('统计各类别的产品数量')">统计各类别数量</button>
+                <button class="quick-btn" onclick="setQuery('计算总销售额')">计算总销售额</button>
+                <button class="quick-btn" onclick="setQuery('按销售额排序')">按销售额排序</button>
+            </div>
+            <button id="queryBtn" onclick="executeQuery()" disabled>执行查询</button>
+        </div>
+
+        <!-- 右侧：结果展示 -->
+        <div class="panel">
+            <h2>3. 查询结果</h2>
+            <div id="resultArea">
+                <p style="color: #666;">查询结果将显示在这里</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = 'http://localhost:8000';
+        let uploadedFiles = [];
+        let selectedFileId = null;
+
+        // 文件上传
+        document.getElementById('fileInput').addEventListener('change', async (e) => {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            const formData = new FormData();
+            formData.append('file', file);
+
+            try {
+                const response = await fetch(`${API_BASE}/upload`, {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+                if (result.success) {
+                    uploadedFiles.push({
+                        id: result.file_id,
+                        name: file.name,
+                        columns: result.headers,
+                        rows: result.estimated_rows
+                    });
+                    updateFileList();
+                    showMessage('success', `文件 ${file.name} 上传成功`);
+                } else {
+                    showMessage('error', result.message);
+                }
+            } catch (error) {
+                showMessage('error', '上传失败: ' + error.message);
+            }
+        });
+
+        // 更新文件列表
+        function updateFileList() {
+            const fileList = document.getElementById('fileList');
+            fileList.innerHTML = uploadedFiles.map(file => `
+                <div class="file-item ${file.id === selectedFileId ? 'selected' : ''}"
+                     onclick="selectFile('${file.id}')">
+                    <strong>${file.name}</strong>
+                    <br>
+                    <small>${file.columns?.length || 0}列，约${file.rows || 0}行</small>
+                </div>
+            `).join('');
+        }
+
+        // 选择文件
+        function selectFile(fileId) {
+            selectedFileId = fileId;
+            updateFileList();
+            document.getElementById('queryBtn').disabled = false;
+            showMessage('info', '已选择文件，可以开始查询');
+        }
+
+        // 设置查询内容
+        function setQuery(text) {
+            document.getElementById('queryInput').value = text;
+        }
+
+        // 执行查询
+        async function executeQuery() {
+            const query = document.getElementById('queryInput').value;
+            if (!query || !selectedFileId) return;
+
+            showMessage('user', query);
+
+            try {
+                // 使用聊天API
+                const response = await fetch(`${API_BASE}/chat`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        message: query,
+                        file_id: selectedFileId
+                    })
+                });
+
+                const result = await response.json();
+                if (result.success) {
+                    showMessage('assistant', result.message);
+                    if (result.data && result.data.length > 0) {
+                        displayResult(result.data);
+                    }
+                } else {
+                    showMessage('error', result.error || '查询失败');
+                }
+            } catch (error) {
+                showMessage('error', '查询失败: ' + error.message);
+            }
+        }
+
+        // 显示消息
+        function showMessage(type, content) {
+            const chatMessages = document.getElementById('chatMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${type}`;
+            messageDiv.innerHTML = content;
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        // 显示结果表格
+        function displayResult(data) {
+            const resultArea = document.getElementById('resultArea');
+            if (!data || data.length === 0) {
+                resultArea.innerHTML = '<p>没有数据</p>';
+                return;
+            }
+
+            const columns = Object.keys(data[0]);
+            const tableHtml = `
+                <table class="result-table">
+                    <thead>
+                        <tr>
+                            ${columns.map(col => `<th>${col}</th>`).join('')}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${data.map(row => `
+                            <tr>
+                                ${columns.map(col => `<td>${row[col] || ''}</td>`).join('')}
+                            </tr>
+                        `).join('')}
+                    </tbody>
+                </table>
+                <p style="margin-top: 10px; color: #666;">
+                    共 ${data.length} 条记录
+                </p>
+            `;
+
+            resultArea.innerHTML = tableHtml;
+        }
+
+        // 初始化
+        showMessage('info', '欢迎使用SQL Agent！请先上传CSV或Excel文件');
+    </script>
+</body>
+</html>

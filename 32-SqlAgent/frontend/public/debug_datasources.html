@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据源调试</title>
+    <style>
+        body {
+            font-family: monospace;
+            padding: 20px;
+            background: #1a1b26;
+            color: #a9b1d6;
+        }
+        .section {
+            background: #24283b;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid #7aa2f7;
+        }
+        h2 {
+            color: #7aa2f7;
+            margin-top: 0;
+        }
+        pre {
+            background: #1a1b26;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        .success { color: #9ece6a; }
+        .error { color: #f7768e; }
+        button {
+            background: #7aa2f7;
+            color: #1a1b26;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover {
+            background: #7dcfff;
+        }
+    </style>
+</head>
+<body>
+    <h1>SQL Agent 数据源调试工具</h1>
+
+    <div class="section">
+        <h2>1. 后端API测试</h2>
+        <button onclick="testBackend()">测试后端API</button>
+        <div id="backend-result"></div>
+    </div>
+
+    <div class="section">
+        <h2>2. 前端mockApi测试</h2>
+        <button onclick="testMockApi()">测试前端加载</button>
+        <div id="mockapi-result"></div>
+    </div>
+
+    <div class="section">
+        <h2>3. 数据对比</h2>
+        <div id="comparison"></div>
+    </div>
+
+    <script>
+        let backendData = null;
+        let frontendData = null;
+
+        async function testBackend() {
+            const resultDiv = document.getElementById('backend-result');
+            resultDiv.innerHTML = '<p>正在请求后端...</p>';
+
+            try {
+                const response = await fetch('http://localhost:8001/datasources');
+                const data = await response.json();
+                backendData = data;
+
+                let html = '<p class="success">✓ 后端API响应成功</p>';
+                html += `<p>数据源数量: ${data.sources.length}</p>`;
+                html += '<h3>数据源列表:</h3><pre>';
+
+                data.sources.forEach((source, idx) => {
+                    html += `${idx + 1}. ${source.name}\n`;
+                    html += `   表名: ${source.table}\n`;
+                    html += `   来源: ${source.source}\n`;
+                    html += `   行数: ${source.rows}\n`;
+                    html += `   列数: ${source.columns.length}\n\n`;
+                });
+
+                html += '</pre>';
+                resultDiv.innerHTML = html;
+
+                if (frontendData) {
+                    compareData();
+                }
+            } catch (error) {
+                resultDiv.innerHTML = `<p class="error">✗ 后端API失败: ${error.message}</p>`;
+            }
+        }
+
+        async function testMockApi() {
+            const resultDiv = document.getElementById('mockapi-result');
+            resultDiv.innerHTML = '<p>正在加载前端数据...</p>';
+
+            try {
+                // 模拟前端的getDataSources逻辑
+                const response = await fetch('http://localhost:8001/datasources');
+                const data = await response.json();
+
+                if (data.success && data.sources) {
+                    const realDataSources = [];
+
+                    // 按source分组
+                    const sourceGroups = {};
+                    data.sources.forEach((source) => {
+                        const groupKey = source.source === 'csv' ? 'real' :
+                                        source.source === 'mock' ? 'erp' : 'upload';
+                        if (!sourceGroups[groupKey]) {
+                            sourceGroups[groupKey] = [];
+                        }
+                        sourceGroups[groupKey].push(source);
+                    });
+
+                    // 真实数据源组
+                    if (sourceGroups.real && sourceGroups.real.length > 0) {
+                        realDataSources.push({
+                            id: 'real_data',
+                            name: '真实数据',
+                            type: 'mysql',
+                            host: 'localhost:8001',
+                            status: 'connected',
+                            tables: sourceGroups.real.map(s => ({
+                                name: s.name,
+                                rowCount: s.rows,
+                                columns: s.columns.map((col) => ({
+                                    name: col,
+                                    type: 'VARCHAR',
+                                    nullable: true,
+                                    isPrimaryKey: false
+                                }))
+                            }))
+                        });
+                    }
+
+                    frontendData = realDataSources;
+
+                    let html = '<p class="success">✓ 前端数据加载成功</p>';
+                    html += `<p>转换后的数据源数量: ${realDataSources.length}</p>`;
+                    html += '<h3>转换后的数据源:</h3><pre>';
+
+                    realDataSources.forEach((ds, idx) => {
+                        html += `${idx + 1}. ${ds.name} (${ds.type})\n`;
+                        html += `   ID: ${ds.id}\n`;
+                        html += `   状态: ${ds.status}\n`;
+                        html += `   表数量: ${ds.tables.length}\n`;
+                        ds.tables.forEach((table, tidx) => {
+                            html += `   表${tidx + 1}: ${table.name} (${table.rowCount} 行, ${table.columns.length} 列)\n`;
+                        });
+                        html += '\n';
+                    });
+
+                    html += '</pre>';
+                    resultDiv.innerHTML = html;
+
+                    if (backendData) {
+                        compareData();
+                    }
+                } else {
+                    resultDiv.innerHTML = '<p class="error">✗ 后端返回数据格式错误</p>';
+                }
+            } catch (error) {
+                resultDiv.innerHTML = `<p class="error">✗ 前端加载失败: ${error.message}</p>`;
+            }
+        }
+
+        function compareData() {
+            const compDiv = document.getElementById('comparison');
+
+            let html = '<h3>数据对比结果:</h3>';
+
+            if (backendData && frontendData) {
+                const csvSources = backendData.sources.filter(s => s.source === 'csv');
+
+                html += '<pre>';
+                html += `后端CSV数据源: ${csvSources.length} 个\n`;
+                html += `前端转换后真实数据源: ${frontendData.length} 个\n\n`;
+
+                if (csvSources.length > 0 && frontendData.length > 0) {
+                    html += '<span class="success">✓ 数据转换成功！</span>\n\n';
+                    html += '详细信息:\n';
+                    frontendData.forEach(ds => {
+                        html += `  数据源: ${ds.name}\n`;
+                        html += `  包含 ${ds.tables.length} 个表:\n`;
+                        ds.tables.forEach(t => {
+                            html += `    - ${t.name}: ${t.rowCount} 行\n`;
+                        });
+                    });
+                } else {
+                    html += '<span class="error">✗ 数据转换失败</span>\n';
+                    html += `CSV源: ${csvSources.length}, 转换后: ${frontendData.length}\n`;
+                }
+
+                html += '</pre>';
+            } else {
+                html += '<p>请先运行后端和前端测试</p>';
+            }
+
+            compDiv.innerHTML = html;
+        }
+
+        // 页面加载时自动测试
+        window.onload = async () => {
+            await testBackend();
+            await testMockApi();
+        };
+    </script>
+</body>
+</html>

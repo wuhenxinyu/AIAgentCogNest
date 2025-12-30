@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Agent - 数据源管理测试</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <style>
+        .data-source-item {
+            transition: all 0.2s ease;
+        }
+        .data-source-item:hover {
+            transform: translateX(4px);
+        }
+        .data-source-item.selected {
+            background: linear-gradient(to right, #e3f2fd, #f5f5f5);
+            border-left: 3px solid #2196f3;
+        }
+        .message-bubble {
+            animation: slideIn 0.3s ease;
+        }
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .loading-dots {
+            display: inline-flex;
+            gap: 4px;
+        }
+        .loading-dots span {
+            width: 8px;
+            height: 8px;
+            background: #666;
+            border-radius: 50%;
+            animation: bounce 1.4s infinite ease-in-out both;
+        }
+        .loading-dots span:nth-child(1) {
+            animation-delay: -0.32s;
+        }
+        .loading-dots span:nth-child(2) {
+            animation-delay: -0.16s;
+        }
+        @keyframes bounce {
+            0%, 80%, 100% {
+                transform: scale(0);
+            }
+            40% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="min-h-screen">
+        <!-- Header -->
+        <header class="bg-white shadow-sm border-b">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                            </svg>
+                        </div>
+                        <h1 class="ml-3 text-xl font-semibold text-gray-900">SQL Agent 数据源管理</h1>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <span id="connectionStatus" class="text-sm text-gray-500">检查连接中...</span>
+                        <button onclick="loadDataSources()" class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition">
+                            刷新数据
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="max-w-7xl mx-auto px-4 py-6">
+            <div class="grid grid-cols-12 gap-6">
+                <!-- 左侧：数据源列表 -->
+                <div class="col-span-3">
+                    <div class="bg-white rounded-lg shadow">
+                        <div class="px-6 py-4 border-b">
+                            <h2 class="text-lg font-medium text-gray-900">数据源</h2>
+                        </div>
+                        <div class="p-4">
+                            <div id="dataSourceList" class="space-y-2">
+                                <!-- 数据源将动态加载 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 中间：查询界面 -->
+                <div class="col-span-6">
+                    <div class="bg-white rounded-lg shadow h-[600px] flex flex-col">
+                        <div class="px-6 py-4 border-b">
+                            <h2 class="text-lg font-medium text-gray-900">查询面板</h2>
+                            <div id="selectedSourceInfo" class="mt-1 text-sm text-gray-500">
+                                请选择数据源
+                            </div>
+                        </div>
+
+                        <!-- 聊天消息区域 -->
+                        <div id="chatMessages" class="flex-1 overflow-y-auto p-4 space-y-3">
+                            <div class="text-center text-gray-400 py-8">
+                                <svg class="w-12 h-12 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                                </svg>
+                                <p>选择数据源开始查询</p>
+                            </div>
+                        </div>
+
+                        <!-- 查询输入区 -->
+                        <div class="border-t p-4">
+                            <div class="flex gap-2 mb-2">
+                                <button onclick="setQuery('显示前10条数据')" class="px-3 py-1 text-xs bg-gray-100 rounded-full hover:bg-gray-200">前10条</button>
+                                <button onclick="setQuery('总记录数是多少？')" class="px-3 py-1 text-xs bg-gray-100 rounded-full hover:bg-gray-200">总数</button>
+                                <button onclick="setQuery('数据概览')" class="px-3 py-1 text-xs bg-gray-100 rounded-full hover:bg-gray-200">概览</button>
+                                <button onclick="setQuery('销售分析')" class="px-3 py-1 text-xs bg-gray-100 rounded-full hover:bg-gray-200">销售分析</button>
+                            </div>
+                            <div class="flex gap-2">
+                                <input
+                                    type="text"
+                                    id="queryInput"
+                                    placeholder="输入查询或问题..."
+                                    class="flex-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    onkeypress="if(event.key === 'Enter') executeQuery()"
+                                />
+                                <button
+                                    onclick="executeQuery()"
+                                    id="queryBtn"
+                                    class="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition disabled:bg-gray-300"
+                                    disabled
+                                >
+                                    查询
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右侧：查询结果 -->
+                <div class="col-span-3">
+                    <div class="bg-white rounded-lg shadow">
+                        <div class="px-6 py-4 border-b">
+                            <h2 class="text-lg font-medium text-gray-900">查询结果</h2>
+                        </div>
+                        <div id="resultArea" class="p-4">
+                            <div class="text-center text-gray-400 py-8">
+                                <svg class="w-12 h-12 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                </svg>
+                                <p>查询结果将显示在这里</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const API_BASE = 'http://localhost:8000';
+        let selectedSource = null;
+        let sessionId = null;
+
+        // 初始化
+        document.addEventListener('DOMContentLoaded', () => {
+            checkConnection();
+            loadDataSources();
+        });
+
+        // 检查连接
+        async function checkConnection() {
+            try {
+                const response = await axios.get(`${API_BASE}/health`);
+                const status = document.getElementById('connectionStatus');
+                status.textContent = `✅ 已连接 (${response.data.database_tables} 个数据表)`;
+                status.className = 'text-sm text-green-500';
+            } catch (error) {
+                const status = document.getElementById('connectionStatus');
+                status.textContent = '❌ 连接失败';
+                status.className = 'text-sm text-red-500';
+            }
+        }
+
+        // 加载数据源
+        async function loadDataSources() {
+            try {
+                const response = await axios.get(`${API_BASE}/datasources`);
+                const sources = response.data.sources;
+
+                const listContainer = document.getElementById('dataSourceList');
+                listContainer.innerHTML = '';
+
+                // 分组显示
+                const groups = {
+                    'real': { title: '📊 真实数据', sources: [] },
+                    'mock': { title: '🎭 模拟数据', sources: [] },
+                    'upload': { title: '📁 上传文件', sources: [] }
+                };
+
+                sources.forEach(source => {
+                    if (source.source === 'csv') groups.real.sources.push(source);
+                    else if (source.source === 'mock' || source.source === 'derived') groups.mock.sources.push(source);
+                    else groups.upload.sources.push(source);
+                });
+
+                // 渲染分组
+                Object.values(groups).forEach(group => {
+                    if (group.sources.length === 0) return;
+
+                    const groupDiv = document.createElement('div');
+                    groupDiv.className = 'mb-4';
+                    groupDiv.innerHTML = `
+                        <h3 class="text-sm font-medium text-gray-700 mb-2">${group.title}</h3>
+                        <div class="space-y-1"></div>
+                    `;
+
+                    const container = groupDiv.querySelector('div');
+                    group.sources.forEach(source => {
+                        const item = document.createElement('div');
+                        item.className = 'data-source-item p-3 rounded-lg border border-gray-200 cursor-pointer hover:border-blue-300';
+                        item.innerHTML = `
+                            <div class="flex items-center justify-between">
+                                <div class="flex-1 min-w-0">
+                                    <p class="text-sm font-medium text-gray-900 truncate">${source.name}</p>
+                                    <p class="text-xs text-gray-500">${source.rows.toLocaleString()} 行</p>
+                                </div>
+                                <span class="px-2 py-1 text-xs rounded-full ${
+                                    source.source === 'csv' ? 'bg-blue-100 text-blue-600' :
+                                    source.source === 'mock' ? 'bg-purple-100 text-purple-600' :
+                                    'bg-green-100 text-green-600'
+                                }">
+                                    ${source.source === 'csv' ? '真实' :
+                                      source.source === 'mock' ? '模拟' : '上传'}
+                                </span>
+                            </div>
+                        `;
+                        item.onclick = () => selectDataSource(source);
+                        container.appendChild(item);
+                    });
+
+                    listContainer.appendChild(groupDiv);
+                });
+            } catch (error) {
+                console.error('加载数据源失败:', error);
+            }
+        }
+
+        // 选择数据源
+        function selectDataSource(source) {
+            selectedSource = source;
+
+            // 更新UI
+            document.querySelectorAll('.data-source-item').forEach(item => {
+                item.classList.remove('selected');
+            });
+            event.currentTarget.classList.add('selected');
+
+            // 更新选中信息
+            const info = document.getElementById('selectedSourceInfo');
+            info.innerHTML = `
+                <span class="font-medium">${source.name}</span>
+                <span class="ml-2 text-gray-400">(${source.rows.toLocaleString()} 行)</span>
+            `;
+
+            // 启用查询按钮
+            document.getElementById('queryBtn').disabled = false;
+
+            // 清空聊天记录
+            document.getElementById('chatMessages').innerHTML = `
+                <div class="text-center text-gray-400 py-8">
+                    <p>已选择: ${source.name}</p>
+                    <p class="text-sm mt-1">可以开始查询了</p>
+                </div>
+            `;
+        }
+
+        // 设置查询
+        function setQuery(text) {
+            document.getElementById('queryInput').value = text;
+        }
+
+        // 执行查询
+        async function executeQuery() {
+            const query = document.getElementById('queryInput').value;
+            if (!query || !selectedSource) return;
+
+            const queryBtn = document.getElementById('queryBtn');
+            const messagesContainer = document.getElementById('chatMessages');
+
+            // 显示用户消息
+            addMessage('user', query);
+            queryBtn.disabled = true;
+
+            // 显示加载动画
+            const loadingId = addMessage('assistant', '<div class="loading-dots"><span></span><span></span><span></span></div> 思考中...');
+
+            try {
+                const response = await axios.post(`${API_BASE}/chat`, {
+                    message: query,
+                    table_name: selectedSource.table,
+                    session_id: sessionId
+                });
+
+                // 更新会话ID
+                if (!sessionId) {
+                    sessionId = response.data.session_id;
+                }
+
+                // 移除加载动画
+                removeMessage(loadingId);
+
+                // 显示回复
+                addMessage('assistant', response.data.message);
+
+                // 如果有数据，显示结果
+                if (response.data.data && response.data.data.length > 0) {
+                    displayResults(response.data.data);
+                }
+
+            } catch (error) {
+                removeMessage(loadingId);
+                addMessage('assistant', '查询失败: ' + error.message);
+            } finally {
+                queryBtn.disabled = false;
+            }
+        }
+
+        // 添加消息
+        function addMessage(role, content) {
+            const messagesContainer = document.getElementById('chatMessages');
+            const messageId = 'msg-' + Date.now();
+
+            const messageDiv = document.createElement('div');
+            messageDiv.id = messageId;
+            messageDiv.className = `message-bubble flex ${role === 'user' ? 'justify-end' : 'justify-start'}`;
+            messageDiv.innerHTML = `
+                <div class="max-w-[80%] rounded-lg px-4 py-2 ${
+                    role === 'user'
+                        ? 'bg-blue-500 text-white'
+                        : 'bg-gray-100 text-gray-800'
+                }">
+                    ${content}
+                </div>
+            `;
+
+            messagesContainer.appendChild(messageDiv);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
+            return messageId;
+        }
+
+        // 移除消息
+        function removeMessage(messageId) {
+            const message = document.getElementById(messageId);
+            if (message) {
+                message.remove();
+            }
+        }
+
+        // 显示结果
+        function displayResults(data) {
+            const resultArea = document.getElementById('resultArea');
+            if (!data || data.length === 0) {
+                resultArea.innerHTML = '<p class="text-center text-gray-400">没有数据</p>';
+                return;
+            }
+
+            // 创建表格
+            const columns = Object.keys(data[0]);
+            let tableHTML = `
+                <div class="mb-3 text-sm text-gray-600">
+                    共 ${data.length} 条记录
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+            `;
+
+            columns.forEach(col => {
+                tableHTML += `<th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">${col}</th>`;
+            });
+
+            tableHTML += `
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+            `;
+
+            // 限制显示前20条
+            const displayData = data.slice(0, 20);
+            displayData.forEach(row => {
+                tableHTML += '<tr>';
+                columns.forEach(col => {
+                    let value = row[col];
+                    if (value !== null && typeof value === 'number') {
+                        value = value.toLocaleString();
+                    }
+                    tableHTML += `<td class="px-4 py-2 whitespace-nowrap text-sm text-gray-900">${value || '-'}</td>`;
+                });
+                tableHTML += '</tr>';
+            });
+
+            tableHTML += `
+                        </tbody>
+                    </table>
+                </div>
+            `;
+
+            if (data.length > 20) {
+                tableHTML += `<p class="mt-2 text-xs text-gray-500 text-center">（仅显示前20条，共${data.length}条）</p>`;
+            }
+
+            resultArea.innerHTML = tableHTML;
+        }
+    </script>
+</body>
+</html>

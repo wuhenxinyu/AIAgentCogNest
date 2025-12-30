@@ -1,0 +1,39 @@
+
+> futuristic-ai-sql-assistant@0.1.0 dev
+> npx vite --host 0.0.0.0 --port 5173
+
+4:41:27 PM [vite] (client) Re-optimizing dependencies because lockfile has changed
+
+  VITE v6.4.1  ready in 373 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: http://192.168.110.131:5173/
+  ➜  Network: http://192.168.110.160:5173/
+  ➜  Network: http://192.168.130.4:5173/
+  ➜  Network: http://172.31.0.1:5173/
+  ➜  Network: http://172.29.0.1:5173/
+  ➜  Network: http://192.168.0.1:5173/
+  ➜  Network: http://192.168.48.1:5173/
+  ➜  Network: http://172.30.0.1:5173/
+  ➜  Network: http://172.23.0.1:5173/
+(node:649484) [DEP0128] DeprecationWarning: Invalid 'main' field in '/home/MuyuWorkSpace/04_SqlAgent/frontend/node_modules/dlv/package.json' of 'dist/dlv.js'. Please either fix that or report it to the module author
+(Use `node --trace-deprecation ...` to show where the warning was created)
+4:57:21 PM [vite] (client) page reload test_with_db.html
+5:16:18 PM [vite] (client) page reload src/services/api.ts
+5:16:24 PM [vite] (client) page reload src/services/api.ts
+5:16:56 PM [vite] (client) hmr update /src/App.tsx, /src/index.css
+5:16:57 PM [vite] (client) ✨ new dependencies optimized: @radix-ui/react-tabs, @radix-ui/react-scroll-area, axios
+5:16:57 PM [vite] (client) ✨ optimized dependencies changed. reloading
+5:17:04 PM [vite] (client) hmr update /src/index.css, /src/components/QueryPanelWithDataSources.tsx, /src/components/DataSourceManager.tsx
+5:17:13 PM [vite] (client) hmr update /src/index.css, /src/components/QueryPanelWithDataSources.tsx, /src/components/DataSourceManager.tsx
+5:17:20 PM [vite] (client) hmr update /src/components/QueryPanelWithDataSources.tsx, /src/index.css
+5:21:09 PM [vite] (client) page reload test_real_data.html
+5:24:11 PM [vite] (client) hmr update /src/index.css, /src/components/QueryPanel.tsx, /src/components/DataSourcePanel.tsx, /src/components/ResultsPanel.tsx
+5:24:47 PM [vite] (client) hmr update /src/App.tsx, /src/index.css
+5:28:19 PM [vite] (client) page reload public/debug_datasources.html
+5:28:46 PM [vite] (client) hmr update /src/components/DataSourcePanel.tsx, /src/index.css
+5:33:23 PM [vite] (client) page reload public/check_data.html
+5:38:00 PM [vite] (client) hmr update /src/index.css, /src/components/QueryPanel.tsx, /src/components/DataSourcePanel.tsx, /src/components/ResultsPanel.tsx
+5:38:12 PM [vite] (client) hmr update /src/components/DataSourcePanel.tsx, /src/index.css
+5:45:45 PM [vite] (client) hmr update /src/components/ResultsPanel.tsx, /src/index.css
+Killed

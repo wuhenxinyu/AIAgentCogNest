@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>检查数据源</title>
+    <style>
+        body {
+            font-family: monospace;
+            padding: 20px;
+            background: #1a1b26;
+            color: #c0caf5;
+        }
+        .datasource {
+            background: #24283b;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid #7aa2f7;
+        }
+        .datasource.real {
+            border-left-color: #9ece6a;
+        }
+        .datasource.mock {
+            border-left-color: #e0af68;
+        }
+        h2 { color: #7aa2f7; }
+        .table-name { color: #bb9af7; }
+        .field { color: #7dcfff; font-size: 12px; }
+        button {
+            background: #7aa2f7;
+            color: #1a1b26;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>SQL Agent 数据源检查</h1>
+    <button onclick="checkBackend()">检查后端API</button>
+    <button onclick="checkFrontend()">检查前端加载</button>
+    <button onclick="location.reload()">刷新页面</button>
+
+    <div id="result"></div>
+
+    <script>
+        async function checkBackend() {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = '<p>正在检查后端...</p>';
+
+            try {
+                const response = await fetch('http://localhost:8001/datasources');
+                const data = await response.json();
+
+                let html = '<h2>后端API返回的数据源：</h2>';
+
+                data.sources.forEach(source => {
+                    const isReal = source.source === 'csv';
+                    const isMock = source.source === 'mock';
+                    const cssClass = isReal ? 'real' : (isMock ? 'mock' : '');
+
+                    html += `
+                        <div class="datasource ${cssClass}">
+                            <h3>${source.name}</h3>
+                            <p><strong>表名:</strong> <span class="table-name">${source.table}</span></p>
+                            <p><strong>来源:</strong> ${source.source} ${isReal ? '← 这是真实数据！' : ''}</p>
+                            <p><strong>行数:</strong> ${source.rows.toLocaleString()}</p>
+                            <p><strong>字段 (${source.columns.length}):</strong></p>
+                            <div class="field">${source.columns.join(', ')}</div>
+                        </div>
+                    `;
+                });
+
+                resultDiv.innerHTML = html;
+            } catch (error) {
+                resultDiv.innerHTML = `<p style="color: #f7768e;">错误: ${error.message}</p>`;
+            }
+        }
+
+        async function checkFrontend() {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = '<p>正在检查前端数据加载...</p>';
+
+            try {
+                // 模拟前端的mockApi.getDataSources()
+                const response = await fetch('http://localhost:8001/datasources');
+                const data = await response.json();
+
+                if (!data.success || !data.sources) {
+                    throw new Error('后端返回数据格式错误');
+                }
+
+                // 按source分组
+                const sourceGroups = {};
+                data.sources.forEach((source) => {
+                    const groupKey = source.source === 'csv' ? 'real' :
+                                    source.source === 'mock' ? 'erp' : 'upload';
+                    if (!sourceGroups[groupKey]) {
+                        sourceGroups[groupKey] = [];
+                    }
+                    sourceGroups[groupKey].push(source);
+                });
+
+                let html = '<h2>前端应该显示的数据源：</h2>';
+
+                // 真实数据组
+                if (sourceGroups.real && sourceGroups.real.length > 0) {
+                    html += `
+                        <div class="datasource real">
+                            <h3>真实数据 ← 你应该看到这个！</h3>
+                            <p><strong>数据源ID:</strong> real_data</p>
+                            <p><strong>状态:</strong> connected</p>
+                            <p><strong>包含表:</strong></p>
+                    `;
+
+                    sourceGroups.real.forEach(s => {
+                        html += `
+                            <div style="margin-left: 20px; margin-top: 10px; padding: 10px; background: #1a1b26; border-radius: 4px;">
+                                <p><strong>表名:</strong> <span class="table-name">${s.name}</span></p>
+                                <p><strong>行数:</strong> ${s.rows.toLocaleString()}</p>
+                                <p><strong>字段 (${s.columns.length}):</strong></p>
+                                <div class="field">${s.columns.join(', ')}</div>
+                            </div>
+                        `;
+                    });
+
+                    html += '</div>';
+                } else {
+                    html += '<p style="color: #f7768e;">⚠️ 没有找到真实数据源！</p>';
+                }
+
+                // ERP模拟数据
+                if (sourceGroups.erp && sourceGroups.erp.length > 0) {
+                    html += `
+                        <div class="datasource mock">
+                            <h3>ERP模拟数据</h3>
+                            <p>包含 ${sourceGroups.erp.length} 个表</p>
+                        </div>
+                    `;
+                }
+
+                resultDiv.innerHTML = html;
+            } catch (error) {
+                resultDiv.innerHTML = `<p style="color: #f7768e;">错误: ${error.message}</p>`;
+            }
+        }
+
+        // 自动检查
+        window.onload = async () => {
+            await checkBackend();
+            setTimeout(async () => {
+                await checkFrontend();
+            }, 1000);
+        };
+    </script>
+</body>
+</html>

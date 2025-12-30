@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>真实数据测试</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .source-item {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .source-item:hover {
+            background-color: #f0f8ff;
+        }
+        .source-item.selected {
+            background-color: #e6f3ff;
+            border-color: #4a90e2;
+        }
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .badge-real { background-color: #4caf50; color: white; }
+        .badge-mock { background-color: #ff9800; color: white; }
+        .badge-upload { background-color: #2196f3; color: white; }
+        pre {
+            background-color: #f8f8f8;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background-color: #357abd;
+        }
+        .loading {
+            text-align: center;
+            color: #666;
+            padding: 20px;
+        }
+        .success {
+            color: #4caf50;
+        }
+        .error {
+            color: #f44336;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>SQL Agent 真实数据测试</h1>
+        <p>测试前端是否能正确连接到后端数据库API (端口 8001)</p>
+
+        <div id="loading" class="loading">
+            <p>正在加载数据源...</p>
+        </div>
+
+        <div id="sources-container">
+            <h2>可用数据源</h2>
+            <div id="sources-list"></div>
+        </div>
+
+        <div id="test-container" style="display: none;">
+            <h2>数据测试</h2>
+            <p>选中的数据源: <strong id="selected-source"></strong></p>
+            <div>
+                <button onclick="testHealth()">测试健康检查</button>
+                <button onclick="testQuery()">测试查询</button>
+                <button onclick="testChat()">测试聊天</button>
+            </div>
+            <div id="test-results"></div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = 'http://localhost:8001';
+        let selectedSource = null;
+        let allSources = [];
+
+        // 加载所有数据源
+        async function loadSources() {
+            try {
+                const response = await axios.get(`${API_BASE}/datasources`);
+                console.log('数据源响应:', response.data);
+
+                allSources = response.data.sources || [];
+                displaySources(allSources);
+
+                document.getElementById('loading').style.display = 'none';
+
+                if (allSources.length > 0) {
+                    // 查找真实数据源
+                    const realData = allSources.find(s => s.source === 'csv' && s.table === 'sales_data');
+                    if (realData) {
+                        selectSource(realData);
+                    }
+                }
+            } catch (error) {
+                console.error('加载数据源失败:', error);
+                document.getElementById('loading').innerHTML = `
+                    <p class="error">加载数据源失败: ${error.message}</p>
+                    <p>请确认后端API服务正在运行在 ${API_BASE}</p>
+                `;
+            }
+        }
+
+        // 显示数据源列表
+        function displaySources(sources) {
+            const container = document.getElementById('sources-list');
+            container.innerHTML = '';
+
+            // 分组显示
+            const groups = {
+                'real': { name: '真实数据', sources: [] },
+                'mock': { name: 'ERP模拟数据', sources: [] },
+                'upload': { name: '上传文件', sources: [] },
+                'other': { name: '其他', sources: [] }
+            };
+
+            sources.forEach(source => {
+                const groupKey = source.source === 'csv' ? 'real' :
+                               source.source === 'mock' ? 'mock' :
+                               source.source === 'upload' ? 'upload' : 'other';
+                groups[groupKey].sources.push(source);
+            });
+
+            Object.keys(groups).forEach(groupKey => {
+                const group = groups[groupKey];
+                if (group.sources.length > 0) {
+                    const groupDiv = document.createElement('div');
+                    groupDiv.innerHTML = `<h3>${group.name}</h3>`;
+
+                    group.sources.forEach(source => {
+                        const item = document.createElement('div');
+                        item.className = 'source-item';
+                        item.innerHTML = `
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <div>
+                                    <strong>${source.name}</strong>
+                                    <span class="badge badge-${source.source === 'csv' ? 'real' : source.source === 'mock' ? 'mock' : 'upload'}">
+                                        ${source.source === 'csv' ? '真实数据' :
+                                          source.source === 'mock' ? '模拟数据' : '上传文件'}
+                                    </span>
+                                </div>
+                                <div style="text-align: right; color: #666;">
+                                    <small>${source.rows.toLocaleString()} 行 | ${source.columns.length} 列</small>
+                                </div>
+                            </div>
+                            <div style="margin-top: 5px; color: #666; font-size: 14px;">
+                                ${source.description}
+                            </div>
+                        `;
+                        item.onclick = () => selectSource(source);
+                        item.id = `source-${source.table}`;
+                        container.appendChild(item);
+                    });
+                }
+            });
+        }
+
+        // 选择数据源
+        function selectSource(source) {
+            selectedSource = source;
+
+            // 更新UI
+            document.querySelectorAll('.source-item').forEach(item => {
+                item.classList.remove('selected');
+            });
+            document.getElementById(`source-${source.table}`).classList.add('selected');
+
+            document.getElementById('selected-source').textContent = source.name;
+            document.getElementById('test-container').style.display = 'block';
+
+            console.log('选中数据源:', source);
+        }
+
+        // 测试健康检查
+        async function testHealth() {
+            const resultsDiv = document.getElementById('test-results');
+            resultsDiv.innerHTML = '<p class="loading">测试中...</p>';
+
+            try {
+                const response = await axios.get(`${API_BASE}/health`);
+                resultsDiv.innerHTML = `
+                    <h3 class="success">健康检查成功 ✓</h3>
+                    <pre>${JSON.stringify(response.data, null, 2)}</pre>
+                `;
+            } catch (error) {
+                resultsDiv.innerHTML = `
+                    <h3 class="error">健康检查失败 ✗</h3>
+                    <pre>${error.message}</pre>
+                `;
+            }
+        }
+
+        // 测试查询
+        async function testQuery() {
+            const resultsDiv = document.getElementById('test-results');
+            resultsDiv.innerHTML = '<p class="loading">测试中...</p>';
+
+            try {
+                const response = await axios.post(`${API_BASE}/query`, {
+                    query: '显示前5条数据',
+                    table_name: selectedSource.table,
+                    limit: 5
+                });
+
+                const result = response.data;
+                let html = `
+                    <h3 class="success">查询成功 ✓</h3>
+                    <p>${result.answer}</p>
+                    <p>返回 ${result.returned_rows} / ${result.total_rows} 条记录</p>
+                `;
+
+                if (result.data && result.data.length > 0) {
+                    html += '<h4>数据预览:</h4>';
+                    html += '<table border="1" style="border-collapse: collapse; width: 100%;">';
+                    html += '<tr style="background-color: #f0f0f0;">';
+                    result.columns.forEach(col => {
+                        html += `<th style="padding: 8px;">${col}</th>`;
+                    });
+                    html += '</tr>';
+
+                    result.data.forEach(row => {
+                        html += '<tr>';
+                        result.columns.forEach(col => {
+                            html += `<td style="padding: 8px;">${row[col] || ''}</td>`;
+                        });
+                        html += '</tr>';
+                    });
+                    html += '</table>';
+                }
+
+                resultsDiv.innerHTML = html;
+            } catch (error) {
+                resultsDiv.innerHTML = `
+                    <h3 class="error">查询失败 ✗</h3>
+                    <pre>${error.message}</pre>
+                `;
+            }
+        }
+
+        // 测试聊天
+        async function testChat() {
+            const resultsDiv = document.getElementById('test-results');
+            resultsDiv.innerHTML = '<p class="loading">测试中...</p>';
+
+            try {
+                const response = await axios.post(`${API_BASE}/chat`, {
+                    message: selectedSource.table === 'sales_data' ? '销售数据分析' : '数据概览',
+                    table_name: selectedSource.table
+                });
+
+                const result = response.data;
+                resultsDiv.innerHTML = `
+                    <h3 class="success">聊天测试成功 ✓</h3>
+                    <p><strong>AI回复:</strong></p>
+                    <pre style="white-space: pre-wrap; background-color: #f9f9f9; padding: 15px; border-radius: 5px;">${result.message}</pre>
+                `;
+            } catch (error) {
+                resultsDiv.innerHTML = `
+                    <h3 class="error">聊天测试失败 ✗</h3>
+                    <pre>${error.message}</pre>
+                `;
+            }
+        }
+
+        // 页面加载完成后执行
+        window.onload = loadSources;
+    </script>
+</body>
+</html>
