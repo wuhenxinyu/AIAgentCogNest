@@ -341,7 +341,7 @@ JIT的核心思想是Agent运行时不预装所有可能相关的信息，只维
 
 1. 编排框架：负责Agent的控制流、状态管理和循环调度，主要有LangChain、LangGraph、agentScope、Qwen-Agent等。
 2. 数据框架：专注RAG场景下的数据摄取、索引和检索优化，LlamaIndex是业内的事实标准。
-3. 向量数据库：负责向量（Embedding）的存储和语义搜索，主要有Pinecone、Weaviate、Chroma、Qdrant、Milvus、PgVector、Elasticsearch。
+3. 向量数据库：负责向量（Embedding）的存储和语义搜索，主要有Pinecone、Weaviate、Chroma、Qdrant、Milvus、PgVector、Elasticsearch、LanceDB。
 4. 通信协议：解决工具标准化接入宿主问题的MCP协议和解决Agent间协作通信的A2A协议。
 5. 记忆系统：在向量数据库等存储系统基础上封装记忆完整生命周期管理的平台，主要有Memo、LETTA、ZEP等。
 
