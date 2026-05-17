@@ -83,3 +83,20 @@ l-len 4096 --quantization gptq --dtype half --gpu-memory-utilization 0.8 --max-n
   --gpu-memory-utilization 0.95 \
   --max-num-seqs 2 \
   --enforce-eager
+  
+
+## SGLang 部署模型示例
+pip install -U sglang
+
+python -m sglang.launch_server \
+--model-path deepseek-ai/DeepSeek-V4-Flash \
+--tp 2 \
+--context-length 262144 \
+--quant fp8 \
+--enable-cache-report \
+--host 0.0.0.0 --port 30000
+
+## VLLM 与 SGLang 区别
+   SGLang 的 RadixAttention + prefix caching 对 agent 共享 prompt ⼯作负载⽐ vLLM 更友好。如果项⽬⾥ agent 调⽤密集，优先
+考虑 SGLang；如果是混合⼯作负载或要 MTP（Multi-Token Prediction 多 token 预测）speculative decoding（推测解码，⼀次
+预测多个 token 加速⽣成），优先 vLLM。
