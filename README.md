@@ -1,6 +1,6 @@
 # AIAgentCogNest
 
-AIAgentCogNest(AI + Agent + Cognition + Nest)主要记录大语言大模型（LLMs） 算法（应用）工程师相关的知识、从零开始的智能体原理及落地实践教程。欢迎各位小伙伴加入我们，共同推进AI Agent的知识体系建立和完善。
+AIAgentCogNest(AI + Agent + Cognition + Nest)主要记录大语言大模型（LLMs） 算法（应用）工程师相关的知识、从零开始的智能体原理及落地实践教程。欢迎有兴趣的小伙伴加入我们，共同推进AI Agent的知识体系建立和完善。
 后续将会持续更新～～～
 
 
