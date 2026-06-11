@@ -1,5 +1,17 @@
 # vllm使用实战
 
+
+## vLLM 具有哪些特点
+• 最先进的服务吞吐量；
+• PagedAttention 可以有效的管理注意力的键和值；
+• 动态批处理请求；
+• 优化好的 CUDA 内核；
+• 与流行的 HuggingFace 模型无缝集成；
+• 高吞吐量服务与各种解码算法，包括并行采样、beam search 等等；
+• 张量并行以支持分布式推理；
+• 流输出；
+• 兼容 OpenAI 的 API 服务。
+
 ## vllm参数详解
   vllm -version # 查看vllm版本
   --model # 模型路径
