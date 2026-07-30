@@ -15,3 +15,7 @@ AIAgentCogNest(AI + Agent + Cognition + Nest)主要记录大语言大模型（LL
 
 
 衷心感谢每一位同行者的付出，也感谢你的理解。
+
+# 交流群请联系管理员
+
+<img src="技术交流群二维码.png">
